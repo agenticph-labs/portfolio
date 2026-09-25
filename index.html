@@ -3,153 +3,730 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>agenticPH Labs — AI · Data · Business Systems</title>
-  <meta name="description" content="Portfolio of agenticPH Labs — practical AI tools for business intelligence, market research, and process automation.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+  <title>AgenticPH Labs — AI · Data · Business Systems</title>
+  <meta name="description" content="AgenticPH Labs builds practical AI systems for Philippine businesses — market intelligence, document analysis, automation, and research tools.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D7377'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23F8FAFC'>A</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar">
-    <a href="#" class="nav-brand">agenticPH Labs</a>
-    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode"></button></li>
+  <nav class="navbar" role="navigation">
+    <a href="#" class="nav-brand" data-tab="hero" aria-label="Home">
+      <svg class="brand-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="6" fill="#0D7377"/>
+        <text x="14" y="19" text-anchor="middle" fill="#F8FAFC" font-size="16" font-weight="700">A</text>
+      </svg>
+      <span>AgenticPH Labs</span>
+    </a>
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="tablist">
+      <li role="none"><a href="#" role="tab" data-tab="about" class="nav-link" aria-selected="false">About</a></li>
+      <li role="none"><a href="#" role="tab" data-tab="projects" class="nav-link" aria-selected="false">Projects</a></li>
+      <li role="none"><a href="#" role="tab" data-tab="case-studies" class="nav-link" aria-selected="false">Case Studies</a></li>
+      <li role="none"><a href="#" role="tab" data-tab="services" class="nav-link" aria-selected="false">Services</a></li>
+      <li role="none"><a href="#" role="tab" data-tab="contact" class="nav-link" aria-selected="false">Contact</a></li>
+      <li role="none">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </li>
     </ul>
   </nav>
 
-  <!-- ==================== HERO ==================== -->
-  <section class="hero" id="hero">
-    <h1>AgenticPH Labs</h1>
-    <p class="hero-tagline">AI | Data | Business Systems</p>
-    <a href="#projects" class="hero-cta">View Projects</a>
-  </section>
-
-  <!-- ==================== ABOUT ==================== -->
-  <section class="section" id="about">
-    <h2 class="section-title">About</h2>
-    <div class="about-content">
-      <p>
-        Economics + Computer Science student building practical AI tools
-        for Philippine businesses — from market intelligence dashboards
-        to procurement document analyzers. Every project here is built to ship,
-        not to shelf.
-      </p>
-    </div>
-  </section>
-
-  <!-- ==================== PROJECTS ==================== -->
-  <section class="section" id="projects">
-    <h2 class="section-title">Projects</h2>
-    <p class="section-subtitle">Portfolio of applied AI &amp; data systems</p>
-
-    <div class="projects-grid">
-      <!-- P1 -->
-      <div class="project-card">
-        <div class="project-icon">📋</div>
-        <h3>Client Intake System</h3>
-        <p>Automated project scoping from client intake forms. Captures requirements, estimates effort, and generates structured briefs.</p>
-        <a href="https://github.com/agenticph-labs/p1-client-intake" class="project-link" target="_blank" rel="noopener">GitHub →</a>
+  <!-- ==================== HERO (default view) ==================== -->
+  <section class="tab-content active" id="tab-hero" role="tabpanel">
+    <div class="hero">
+      <div class="hero-bg-pattern" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="hex-grid" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+              <path d="M30 0 L60 15 L60 37 L30 52 L0 37 L0 15 Z" fill="none" stroke="#0D7377" stroke-width="0.5" opacity="0.07"/>
+            </pattern>
+            <linearGradient id="hero-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0D7377" stop-opacity="0.03"/>
+              <stop offset="50%" stop-color="#D4A017" stop-opacity="0.04"/>
+              <stop offset="100%" stop-color="#475569" stop-opacity="0.02"/>
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hero-grad)"/>
+          <rect width="100%" height="100%" fill="url(#hex-grid)"/>
+          <!-- accent circles -->
+          <circle cx="100" cy="80" r="120" fill="#0D7377" opacity="0.025"/>
+          <circle cx="700" cy="500" r="160" fill="#D4A017" opacity="0.025"/>
+          <circle cx="500" cy="60" r="80" fill="#475569" opacity="0.02"/>
+        </svg>
       </div>
-
-      <!-- P2 -->
-      <div class="project-card">
-        <div class="project-icon">☕</div>
-        <h3>PH Market Intelligence</h3>
-        <p>Philippine coffee shop industry dashboard — market sizing, competitor density, and growth trend analytics in one view.</p>
-        <a href="https://github.com/agenticph-labs/p2-ph-market-intelligence" class="project-link" target="_blank" rel="noopener">GitHub →</a>
-      </div>
-
-      <!-- P3 -->
-      <div class="project-card">
-        <div class="project-icon">📄</div>
-        <h3>RFP Analyzer</h3>
-        <p>AI-powered procurement document analysis — extracts requirements, flags risks, and scores vendor responses against criteria.</p>
-        <a href="https://github.com/agenticph-labs/p3-rfp-analyzer" class="project-link" target="_blank" rel="noopener">GitHub →</a>
-      </div>
-
-      <!-- P4 -->
-      <div class="project-card">
-        <div class="project-icon">💬</div>
-        <h3>Customer Feedback Intel</h3>
-        <p>Sentiment analysis + NLP pipeline that turns raw customer reviews into actionable product and service insights.</p>
-        <a href="https://github.com/agenticph-labs/p4-customer-feedback-intel" class="project-link" target="_blank" rel="noopener">GitHub →</a>
-      </div>
-
-      <!-- P5 -->
-      <div class="project-card">
-        <div class="project-icon">📊</div>
-        <h3>Competitive Intel Brief</h3>
-        <p>Automated daily competitor analysis — scrapes news, tracks positioning changes, and distills into a one-page brief.</p>
-        <a href="https://github.com/agenticph-labs/p5-competitive-intel" class="project-link" target="_blank" rel="noopener">GitHub →</a>
-      </div>
-
-      <!-- P6 -->
-      <div class="project-card">
-        <div class="project-icon">🔍</div>
-        <h3>Market Entry Research</h3>
-        <p>Research-to-decision pipeline for Philippine markets — synthesizes macro data, regulatory landscape, and buyer signals.</p>
-        <a href="https://github.com/agenticph-labs/p6-research-decision" class="project-link" target="_blank" rel="noopener">GitHub →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== SERVICES ==================== -->
-  <section class="section" id="services">
-    <h2 class="section-title">Services</h2>
-    <p class="section-subtitle">Available on Upwork</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-num">S1</span>
-        <h4>AI Workflow Automation</h4>
-        <p>Build end-to-end automated pipelines for document processing, data extraction, and reporting.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">S2</span>
-        <h4>Market Intelligence Dashboards</h4>
-        <p>Custom dashboards that track competitors, market trends, and customer sentiment in real time.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">S3</span>
-        <h4>Procurement AI Solutions</h4>
-        <p>RFP analysis, vendor scoring, and compliance checks powered by LLMs and structured data pipelines.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">S4</span>
-        <h4>Data Strategy &amp; Consulting</h4>
-        <p>From research scoping to production-ready data systems — strategy, architecture, and implementation.</p>
+      <div class="hero-content">
+        <div class="hero-badge">AgenticPH Labs</div>
+        <h1>AI <span class="accent-gold">|</span> Data <span class="accent-gold">|</span> Business Systems</h1>
+        <p class="hero-tagline">We build practical AI systems for Philippine businesses.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" data-tab="about">About Us</a>
+          <a href="#" class="btn btn-secondary" data-tab="projects">See Our Work</a>
+        </div>
+        <!-- decorative divider -->
+        <div class="hero-divider" aria-hidden="true">
+          <svg width="200" height="20" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="10" x2="190" y2="10" stroke="#0D7377" stroke-width="1" opacity="0.3"/>
+            <circle cx="100" cy="10" r="4" fill="#D4A017" opacity="0.6"/>
+            <circle cx="70" cy="10" r="2" fill="#0D7377" opacity="0.3"/>
+            <circle cx="130" cy="10" r="2" fill="#0D7377" opacity="0.3"/>
+          </svg>
+        </div>
+        <p class="hero-sub">Enthusiasts with experience — delivering production-grade AI.</p>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CONTACT ==================== -->
-  <section class="section" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="section-subtitle">Let's build something</p>
+  <!-- ==================== ABOUT TAB ==================== -->
+  <section class="tab-content" id="tab-about" role="tabpanel">
+    <div class="section-page">
+      <div class="page-header">
+        <h2 class="section-title">About</h2>
+        <div class="title-accent" aria-hidden="true">
+          <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
+        </div>
+      </div>
 
-    <div class="contact-info">
-      <p>Find all projects and services on GitHub, or hire me on Upwork.</p>
-      <div class="contact-links">
-        <a href="https://github.com/agenticph-labs" class="btn-github" target="_blank" rel="noopener">
-          GitHub
+      <div class="about-grid">
+        <div class="about-main">
+          <p class="about-lead">We are enthusiasts with experience building AI-powered business systems for the Philippine market.</p>
+          <p>AgenticPH Labs builds practical AI tools for market intelligence, document analysis, business automation, and research decision support. Every project here is designed to ship — deployed via Streamlit Cloud, delivering working URLs, not repos to clone.</p>
+          <p>Our work spans procurement intelligence, customer feedback analysis, competitive monitoring, and structured research-to-decision pipelines. We focus on the gap between raw AI capability and real business utility — bridging it with clean architecture, actionable outputs, and observable results.</p>
+
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label">Built by</span>
+              <span class="meta-value">Cephalon Cy <span class="meta-note">(Ship Cephalon)</span></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">With</span>
+              <span class="meta-value">Cephalon Suda <span class="meta-note">(Build Agent)</span></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Stack</span>
+              <span class="meta-value">Python · Streamlit · LLMs · NLP</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual" aria-hidden="true">
+          <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="20" width="240" height="240" rx="30" fill="#0D7377" opacity="0.06"/>
+            <rect x="40" y="40" width="200" height="200" rx="20" fill="#F8FAFC" stroke="#0D7377" stroke-width="1" stroke-opacity="0.15"/>
+            <!-- decorative circuit lines -->
+            <path d="M80 80 L140 80 L140 140 L200 140" stroke="#0D7377" stroke-width="2" stroke-opacity="0.3" fill="none"/>
+            <circle cx="80" cy="80" r="6" fill="#0D7377" opacity="0.4"/>
+            <circle cx="200" cy="140" r="6" fill="#D4A017" opacity="0.5"/>
+            <path d="M100 200 L100 160 L160 160 L160 120" stroke="#475569" stroke-width="1.5" stroke-opacity="0.2" fill="none"/>
+            <circle cx="100" cy="200" r="4" fill="#475569" opacity="0.3"/>
+            <!-- data nodes -->
+            <circle cx="180" cy="200" r="10" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-opacity="0.3"/>
+            <circle cx="180" cy="200" r="4" fill="#D4A017" opacity="0.4"/>
+            <circle cx="60" cy="150" r="8" fill="none" stroke="#0D7377" stroke-width="1.5" stroke-opacity="0.25"/>
+            <circle cx="60" cy="150" r="3" fill="#0D7377" opacity="0.35"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS TAB ==================== -->
+  <section class="tab-content" id="tab-projects" role="tabpanel">
+    <div class="section-page">
+      <div class="page-header">
+        <h2 class="section-title">Projects</h2>
+        <div class="title-accent" aria-hidden="true">
+          <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
+        </div>
+      </div>
+
+      <!-- Category filter tabs -->
+      <div class="filter-bar" role="tablist" aria-label="Project categories">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="ai" role="tab">AI</button>
+        <button class="filter-btn" data-filter="research" role="tab">Research</button>
+        <button class="filter-btn" data-filter="automation" role="tab">Automation</button>
+        <button class="filter-btn" data-filter="data" role="tab">Data</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- P1 Client Intake → Automation -->
+        <a href="https://github.com/agenticph-labs/p1-client-intake" class="project-card" data-category="automation" target="_blank" rel="noopener">
+          <div class="card-accent automation-accent"></div>
+          <div class="card-body">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#475569" stroke-width="1.8" fill="none"/><path d="M10 12h12M10 17h8M10 22h6" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Client Intake System</h3>
+            <p>Automated project scoping from client intake forms. Captures requirements, estimates effort, and generates structured briefs.</p>
+            <div class="card-tags">
+              <span class="tag tag-automation">Automation</span>
+              <span class="tag tag-data">NLP</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-link">View on GitHub →</span>
+            </div>
+          </div>
         </a>
-        <a href="https://www.upwork.com/freelancers/agenticph" class="btn-upwork" target="_blank" rel="noopener">
-          Upwork
+
+        <!-- P2 Market Intel → Data -->
+        <a href="https://github.com/agenticph-labs/p2-ph-market-intelligence" class="project-card" data-category="data" target="_blank" rel="noopener">
+          <div class="card-accent data-accent"></div>
+          <div class="card-body">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="20" width="6" height="8" rx="1" fill="#0D7377" opacity="0.6"/><rect x="13" y="12" width="6" height="16" rx="1" fill="#0D7377" opacity="0.8"/><rect x="22" y="4" width="6" height="24" rx="1" fill="#0D7377"/></svg>
+            </div>
+            <h3>PH Market Intelligence</h3>
+            <p>Philippine coffee shop industry dashboard — market sizing, competitor density, growth trend analytics in one view.</p>
+            <div class="card-tags">
+              <span class="tag tag-data">Data</span>
+              <span class="tag tag-research">Research</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-link">View on GitHub →</span>
+            </div>
+          </div>
         </a>
+
+        <!-- P3 RFP Analyzer → AI -->
+        <a href="https://github.com/agenticph-labs/p3-rfp-analyzer" class="project-card" data-category="ai" target="_blank" rel="noopener">
+          <div class="card-accent ai-accent"></div>
+          <div class="card-body">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4L28 12v8L16 28 4 20v-8L16 4z" stroke="#475569" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="4" stroke="#D4A017" stroke-width="1.5" fill="none"/><path d="M16 8v2M16 22v2M8 16h2M22 16h2" stroke="#475569" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>RFP Analyzer</h3>
+            <p>AI-powered procurement document analysis — extracts requirements, flags risks, and scores vendor responses.</p>
+            <div class="card-tags">
+              <span class="tag tag-ai">AI</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-link">View on GitHub →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- P4 Feedback Intel → AI/Data -->
+        <a href="https://github.com/agenticph-labs/p4-customer-feedback-intel" class="project-card" data-category="ai" target="_blank" rel="noopener">
+          <div class="card-accent ai-accent"></div>
+          <div class="card-body">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 10a4 4 0 014-4h12a4 4 0 014 4v6a4 4 0 01-4 4h-4l-4 4v-4h-4a4 4 0 01-4-4v-6z" stroke="#475569" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="1.5" fill="#D4A017"/><circle cx="16" cy="16" r="1.5" fill="#D4A017"/><circle cx="20" cy="16" r="1.5" fill="#D4A017"/></svg>
+            </div>
+            <h3>Customer Feedback Intel</h3>
+            <p>Sentiment analysis + NLP pipeline that turns raw customer reviews into actionable product and service insights.</p>
+            <div class="card-tags">
+              <span class="tag tag-ai">AI</span>
+              <span class="tag tag-data">Data</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-link">View on GitHub →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- P5 Competitive Intel → Automation -->
+        <a href="https://github.com/agenticph-labs/p5-competitive-intel" class="project-card" data-category="automation" target="_blank" rel="noopener">
+          <div class="card-accent automation-accent"></div>
+          <div class="card-body">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 26h24" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/><path d="M8 22V16h4v6" stroke="#475569" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M14 22V10h4v12" stroke="#475569" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M20 22V4h4v18" stroke="#475569" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+            </div>
+            <h3>Competitive Intel Brief</h3>
+            <p>Automated daily competitor analysis — scrapes news, tracks positioning changes, distills into a one-page brief.</p>
+            <div class="card-tags">
+              <span class="tag tag-automation">Automation</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-link">View on GitHub →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- P6 Research Decision → Research -->
+        <a href="https://github.com/agenticph-labs/p6-research-decision" class="project-card" data-category="research" target="_blank" rel="noopener">
+          <div class="card-accent research-accent"></div>
+          <div class="card-body">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="#475569" stroke-width="1.8" fill="none"/><path d="M16 10v6l4 2" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Market Entry Research</h3>
+            <p>Research-to-decision pipeline for Philippine markets — synthesizes macro data, regulatory landscape, and buyer signals.</p>
+            <div class="card-tags">
+              <span class="tag tag-research">Research</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-link">View on GitHub →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CASE STUDIES TAB ==================== -->
+  <section class="tab-content" id="tab-case-studies" role="tabpanel">
+    <div class="section-page">
+      <div class="page-header">
+        <h2 class="section-title">Case Studies</h2>
+        <div class="title-accent" aria-hidden="true">
+          <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
+        </div>
+        <p class="section-subtitle">Deep dives into each project — from problem to production.</p>
+      </div>
+
+      <div class="case-study-selector" role="tablist" aria-label="Select case study">
+        <button class="case-btn active" data-case="cs1" role="tab" aria-selected="true">Client Intake</button>
+        <button class="case-btn" data-case="cs2" role="tab">Market Intel</button>
+        <button class="case-btn" data-case="cs3" role="tab">RFP Analyzer</button>
+        <button class="case-btn" data-case="cs4" role="tab">Feedback Intel</button>
+        <button class="case-btn" data-case="cs5" role="tab">Competitive Intel</button>
+        <button class="case-btn" data-case="cs6" role="tab">Market Entry</button>
+      </div>
+
+      <!-- CS1: Client Intake System -->
+      <article class="case-study active" id="cs1">
+        <h3 class="case-title">Client Intake &amp; Project Scoping Pipeline</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Consulting firms waste hours manually processing client inquiry forms — reading emails, extracting requirements, classifying needs, and producing project scopes. Every client uses different language; no two intake forms look alike. This mismatch causes inconsistent scoping, missed requirements, and slow turnaround.</p>
+          </div>
+          <div class="case-section">
+            <h4>Objective</h4>
+            <p>Build an automated pipeline that ingests client data in any format (JSON, CSV), validates it, classifies the need using a rule engine, generates a structured project scope document, and outputs a formatted report — all in a single, auditable pass. No APIs, no external services — pure Python stdlib.</p>
+          </div>
+          <div class="case-section">
+            <h4>Approach</h4>
+            <p>We chose a modular 5-stage pipeline architecture (Ingest → Validate → Classify → Scope → Output) over an LLM-based approach because the classification rules are deterministic and auditable — when a client says "CRM integration," we need to map that to a known category with confidence scoring, not generate a probabilistic guess. A keyword-based rule engine with 10 service categories gives us perfect reproducibility.</p>
+          </div>
+          <div class="case-section">
+            <h4>Implementation</h4>
+            <p>Each pipeline stage is an independent function in <code>client_intake_pipeline.py</code>. Stage 1 auto-detects file format (JSON/CSV) and walks directories recursively. Stage 2 checks 5 required fields per record with error logging. Stage 3 matches against configurable <code>CLASSIFICATION_RULES</code> — a dict of keywords mapped to categories, sub-categories, and complexity weights. Stage 4 uses Jinja-style string templates (stdlib <code>string.Template</code>) for scope generation. Stage 5 writes individual Markdown reports plus a summary index.</p>
+            <p class="evidence-note">📁 <strong>Evidence:</strong> Sample intake data at <code>intake_data/</code> — see <a href="https://github.com/agenticph-labs/p1-client-intake/blob/main/intake_data/sample_client.json" target="_blank" rel="noopener">sample_client.json</a> and generated reports in <a href="https://github.com/agenticph-labs/p1-client-intake/tree/main/output" target="_blank" rel="noopener">output/</a>.</p>
+          </div>
+          <div class="case-section">
+            <h4>Result / Output</h4>
+            <p>The pipeline processes 7 sample client records (3 JSON + 4 CSV) in under 0.5 seconds. Each record generates a comprehensive scope document with: objective, deliverables, tech stack, timeline, budget range, risk factors, and next steps. The summary index links all reports for at-a-glance portfolio review.</p>
+            <p class="evidence-note">🖼️ <strong>Screenshot:</strong> <em>To be captured — sample output Markdown renders cleanly in any viewer.</em></p>
+          </div>
+          <div class="case-section">
+            <h4>Technical Details</h4>
+            <ul>
+              <li><strong>Stack:</strong> Python 3.10+ (stdlib only — zero dependencies)</li>
+              <li><strong>Architecture:</strong> 5-stage pipeline with clean input → process → output separation</li>
+              <li><strong>Classification:</strong> Keyword-based rule engine with confidence scoring (0–1) and complexity estimation (Low/Medium/High)</li>
+              <li><strong>Template Engine:</strong> <code>string.Template</code> — 8 service category templates + general fallback</li>
+              <li><strong>Testing:</strong> pytest suite covering validation, classification, and output stages</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4>Limitations &amp; Future Work</h4>
+            <ul>
+              <li>Current keyword rules are static — future versions should support YAML-configured rule sets without code changes</li>
+              <li>No LLM fallback for ambiguous classifications (intentional — keeps the pipeline deterministic)</li>
+              <li>Streamlit UI exists (<code>streamlit_ui.py</code>) but needs deeper integration with the pipeline output</li>
+              <li>Could support PDF intake documents via OCR pre-processing stage</li>
+            </ul>
+          </div>
+          <div class="case-footer">
+            <a href="https://github.com/agenticph-labs/p1-client-intake" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CS2: PH Market Intelligence -->
+      <article class="case-study" id="cs2">
+        <h3 class="case-title">Philippine Coffee Shop Market Intelligence Dashboard</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Philippine business stakeholders lack accessible, consolidated market intelligence on the local coffee shop industry. Data is scattered across Euromonitor reports, USDA briefs, news articles, and company filings — making it nearly impossible to get a coherent picture of market size, competitive dynamics, pricing, and geographic distribution without a dedicated research team.</p>
+          </div>
+          <div class="case-section">
+            <h4>Objective</h4>
+            <p>Build an interactive, Streamlit-hosted dashboard that consolidates Philippine coffee shop market data into a single view — spanning market overview, competitor analysis, geographic distribution, pricing analysis, and key business insights. Target: an entrepreneur or investor who should understand the market in 10 minutes, not 10 hours.</p>
+          </div>
+          <div class="case-section">
+            <h4>Approach</h4>
+            <p>We chose a dashboard over a static report because market intelligence is inherently exploratory — a decision-maker needs to filter by region, drill into competitor detail, and toggle between views. Streamlit gave us the fastest path from pandas dataframes to interactive Plotly charts without a separate frontend framework. The data pipeline (clean → transform → analyze → export) is separated from the dashboard layer so the analysis is independently testable and reusable.</p>
+          </div>
+          <div class="case-section">
+            <h4>Implementation</h4>
+            <p><code>pipeline.py</code> handles all data processing: ingests raw CSVs, computes derived metrics (YoY growth, CAGR, import dependency ratio), and exports clean datasets plus 13 Plotly HTML charts. <code>dashboard.py</code> presents 5 tabbed pages in Streamlit — each with KPI cards, interactive charts, and toggleable views. The <code>viz/</code> directory contains standalone HTML charts for offline sharing.</p>
+            <p class="evidence-note">📁 <strong>Evidence:</strong> See <a href="https://github.com/agenticph-labs/p2-ph-market-intelligence/blob/main/data/processed/business_insights.md" target="_blank" rel="noopener">business_insights.md</a> for 13 data-driven findings, and <a href="https://github.com/agenticph-labs/p2-ph-market-intelligence/tree/main/viz" target="_blank" rel="noopener">viz/</a> for standalone HTML charts.</p>
+          </div>
+          <div class="case-section">
+            <h4>Result / Output</h4>
+            <p>The dashboard reveals a $1.82B (2025) market projected at $2.30B by 2028 (7.3% CAGR). Key insight: Zus Coffee's 100% YoY store growth signals that the value segment is the battleground. Starbucks leads premium with 520 stores but commands 2.6× the average price of value players. 80% of Filipino adults drink 2.5 cups/day — massive total addressable market with low specialty penetration (14%) indicating headroom.</p>
+            <p class="evidence-note">🖼️ <strong>Screenshots:</strong> <em>To be captured — dashboard renders 13 interactive Plotly charts across 5 pages.</em></p>
+          </div>
+          <div class="case-section">
+            <h4>Technical Details</h4>
+            <ul>
+              <li><strong>Stack:</strong> Python, pandas, Plotly, Streamlit</li>
+              <li><strong>Data Sources:</strong> Euromonitor, USDA, Statista, company filings, store locator websites (2024–2026)</li>
+              <li><strong>Analytics:</strong> Market sizing (top-down + bottom-up), competitive positioning maps, price ladders, geographic density heatmaps</li>
+              <li><strong>Visualization:</strong> 13 interactive Plotly charts, KPI cards, tabbed dashboard layout</li>
+              <li><strong>Deployment:</strong> Streamlit Cloud — <em>URL to be added after deployment</em></li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4>Limitations &amp; Future Work</h4>
+            <ul>
+              <li>Data is manually collected — an automated news/data ingestion pipeline would keep insights fresh</li>
+              <li>No real-time pricing data; menu prices are point-in-time snapshots</li>
+              <li>Geographic data is aggregated at regional level — store-level coordinates would enable richer spatial analysis</li>
+              <li>Could add sentiment analysis on social media mentions for brand perception tracking</li>
+            </ul>
+          </div>
+          <div class="case-footer">
+            <a href="https://github.com/agenticph-labs/p2-ph-market-intelligence" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CS3: RFP Analyzer -->
+      <article class="case-study" id="cs3">
+        <h3 class="case-title">RFP / RFQ Analyzer</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Procurement teams spend hours reading PDF-based RFPs and RFQs — extracting deadlines, eligibility criteria, deliverables, evaluation criteria, and risks. RFP documents are dense, inconsistent in format, and easy to miss details in. A missed deadline or overlooked eligibility requirement can disqualify a bid worth millions.</p>
+          </div>
+          <div class="case-section">
+            <h4>Objective</h4>
+            <p>Build an AI-powered system that extracts structured information from procurement PDFs — deadlines, eligibility, deliverables, evaluation criteria, budget, risks — and presents them in a clean, auditable interface. The output must be validated against a defined schema so no critical field is silently dropped.</p>
+          </div>
+          <div class="case-section">
+            <h4>Approach</h4>
+            <p>We chose an LLM-in-the-loop architecture over pure regex because procurement documents vary wildly in structure — a regex approach would require perpetual maintenance. Three independently testable layers (PDF parsing → LLM extraction → Pydantic validation) let us swap any component without touching the others. The Pydantic validation layer ensures the LLM's output is schema-compliant; fields missing from the document are gracefully omitted rather than hallucinated.</p>
+          </div>
+          <div class="case-section">
+            <h4>Implementation</h4>
+            <p>PyMuPDF extracts raw text from PDF uploads. The analyzer sends extracted text to an OpenAI-compatible LLM with a structured output prompt. The response is validated against <code>RFPParseResult</code> (Pydantic model) — catching malformed fields before they reach the UI. The Streamlit frontend presents results in collapsible cards: summary, dates, deliverables, eligibility, evaluation criteria, budget, risks. A bundled 5-page sample RFP (<code>sample_docs/</code>) lets users test without uploading their own documents.</p>
+            <p class="evidence-note">📁 <strong>Evidence:</strong> See <a href="https://github.com/agenticph-labs/p3-rfp-analyzer/blob/main/sample_docs/rfp_sample.pdf" target="_blank" rel="noopener">sample RFP PDF</a> and <a href="https://github.com/agenticph-labs/p3-rfp-analyzer/tree/main/tests" target="_blank" rel="noopener">test suite</a> in the repository.</p>
+          </div>
+          <div class="case-section">
+            <h4>Result / Output</h4>
+            <p>The system extracts 7 structured fields from procurement PDFs with schema validation — eliminating manual extraction. The collapsible card UI lets procurement teams scan extracted data at a glance, expand for detail, and inspect raw JSON for auditing. The test suite validates both happy-path extraction and edge cases (missing fields, malformed documents).</p>
+            <p class="evidence-note">🖼️ <strong>Screenshot:</strong> <em>To be captured — Streamlit UI with collapsible extraction cards.</em></p>
+          </div>
+          <div class="case-section">
+            <h4>Technical Details</h4>
+            <ul>
+              <li><strong>Stack:</strong> Python, PyMuPDF (fitz), OpenAI API, Pydantic, Streamlit</li>
+              <li><strong>Architecture:</strong> PDF Parser → LLM Analyzer → Pydantic Validation → Streamlit UI</li>
+              <li><strong>Schema:</strong> Pydantic model with 7 structured fields + graceful omission for missing data</li>
+              <li><strong>Testing:</strong> pytest with sample RFP PDF, edge case test fixtures</li>
+              <li><strong>Chunking:</strong> Long-document support for documents exceeding LLM context windows</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4>Limitations &amp; Future Work</h4>
+            <ul>
+              <li>LLM extraction cost — per-document API calls add up for high-volume procurement teams</li>
+              <li>No image/chart extraction from PDFs — tables in scanned documents are not parsed</li>
+              <li>Multi-document comparison (e.g., compare 3 vendors against one RFP) is not yet supported</li>
+              <li>API key must be provided by the user — future version could offer a server-side key pool</li>
+            </ul>
+          </div>
+          <div class="case-footer">
+            <a href="https://github.com/agenticph-labs/p3-rfp-analyzer" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CS4: Customer Feedback Intel -->
+      <article class="case-study" id="cs4">
+        <h3 class="case-title">Customer Feedback Intelligence System</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Philippine businesses collect customer reviews across multiple channels (Shopee, Lazada, Google Maps, Facebook) but lack the tools to systematically extract signal from noise. Raw review text hides actionable patterns — which product features drive negative sentiment, which customer segments are most dissatisfied, and whether issues are trending up or down.</p>
+          </div>
+          <div class="case-section">
+            <h4>Objective</h4>
+            <p>Build an NLP pipeline + interactive dashboard that ingests customer review data, runs sentiment analysis, discovers topics via unsupervised learning, detects temporal trends, and generates prioritized action recommendations. All analysis must be interpretable by non-technical business stakeholders.</p>
+          </div>
+          <div class="case-section">
+            <h4>Approach</h4>
+            <p>We chose VADER for sentiment analysis because it works out of the box on social-media-style text (emoticons, intensifiers, negations) with zero training data — critical for a Philippine market where no labeled sentiment dataset exists. For topic extraction, TF-IDF + NMF gives interpretable, additive topics without needing a GPU or labeled data. The rule-based recommendation engine converts statistical findings into actionable business language without requiring an LLM for every analysis run.</p>
+          </div>
+          <div class="case-section">
+            <h4>Implementation</h4>
+            <p><code>nlp_pipeline.py</code> contains the full pipeline: VADER compound scores map to positive/neutral/negative, TF-IDF vectorization (max_df=0.8, min_df=2) feeds NMF decomposition into 5 topics with top-8 keywords each, and reviews are assigned their dominant topic. Monthly temporal aggregation surfaces sentiment and rating trends. The recommendation engine applies hand-crafted rules: product quality issues (low-rated keywords), category hotspots (most negative category), shipping complaints, pricing perception, and emerging complaint clusters. <code>dashboard.py</code> renders all outputs in a four-tab Streamlit app.</p>
+            <p class="evidence-note">📁 <strong>Evidence:</strong> See <a href="https://github.com/agenticph-labs/p4-customer-feedback-intel/blob/main/data/reviews.csv" target="_blank" rel="noopener">reviews.csv</a> (100 sample reviews, Jan–Sep 2025) and the full <a href="https://github.com/agenticph-labs/p4-customer-feedback-intel/blob/main/nlp_pipeline.py" target="_blank" rel="noopener">NLP pipeline</a>.</p>
+          </div>
+          <div class="case-section">
+            <h4>Result / Output</h4>
+            <p>The dashboard reveals sentiment distribution (pie + KPI cards), 5 interpretable topics with keyword summaries, monthly sentiment/rating trends (dual-axis chart), and 5 categories of actionable recommendations. A product manager can open the dashboard and know within 30 seconds which issues need immediate attention.</p>
+            <p class="evidence-note">🖼️ <strong>Screenshots:</strong> <em>To be captured — dashboard showing sentiment overview, topic clusters, and trend charts.</em></p>
+          </div>
+          <div class="case-section">
+            <h4>Technical Details</h4>
+            <ul>
+              <li><strong>Stack:</strong> Python, VADER, scikit-learn (TF-IDF + NMF), pandas, Plotly, Streamlit</li>
+              <li><strong>Sentiment:</strong> VADER compound score → 3-class (positive/neutral/negative)</li>
+              <li><strong>Topics:</strong> TF-IDF vectorization → NMF decomposition (5 topics, 8 keywords each)</li>
+              <li><strong>Trends:</strong> Monthly temporal aggregation with dual-axis (rating + review volume)</li>
+              <li><strong>Recommendations:</strong> 5 rule-based categories — product quality, sentiment hotspots, shipping, pricing, emerging complaints</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4>Limitations &amp; Future Work</h4>
+            <ul>
+              <li>VADER is English-only — Taglish (Tagalog + English) reviews need a custom or multilingual sentiment model</li>
+              <li>Topic count (k=5) is fixed — dynamic elbow-method selection would improve accuracy as datasets grow</li>
+              <li>No automatic data ingestion — CSV upload boundaries limit real-time monitoring</li>
+              <li>Could add LLM-powered summary generation for each topic cluster</li>
+            </ul>
+          </div>
+          <div class="case-footer">
+            <a href="https://github.com/agenticph-labs/p4-customer-feedback-intel" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CS5: Competitive Intel Brief -->
+      <article class="case-study" id="cs5">
+        <h3 class="case-title">Daily Competitive Intelligence Brief</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Philippine businesses operate in a fast-moving competitive landscape where tracking competitors manually — checking news, monitoring hiring, comparing features, tracking pricing changes — is impractical. Most SME decision-makers rely on anecdotal intel, missing critical shifts until it's too late.</p>
+          </div>
+          <div class="case-section">
+            <h4>Objective</h4>
+            <p>Build an automated agentic workflow that collects competitor data from multiple simulated sources, runs multi-dimensional analysis (features, sentiment, hiring, pricing), and produces a structured daily intelligence brief — all in a single pipeline execution. The output must be decision-ready, not a data dump.</p>
+          </div>
+          <div class="case-section">
+            <h4>Approach</h4>
+            <p>We chose a modular collect → analyze → synthesize → report architecture because real competitive intelligence pipelines evolve constantly — new data sources get added, analysis dimensions change, report formats shift. Each stage is an independent module (<code>collector.py</code>, <code>analyzer.py</code>, <code>reporter.py</code>) orchestrated by <code>pipeline.py</code>. This lets us swap in real APIs (NewsAPI, LinkedIn, Crunchbase) for simulated data without refactoring analysis or reporting logic.</p>
+          </div>
+          <div class="case-section">
+            <h4>Implementation</h4>
+            <p><code>collector.py</code> gathers competitor profiles, news summaries, job postings, feature matrices, and pricing tiers from simulated public sources (3 AI-analytics competitors + our product profile, each with 13 features and 3–4 pricing tiers). <code>analyzer.py</code> runs 5 analysis engines: feature gap analysis, sentiment scoring, hiring signals, pricing comparison, and a weighted composite competitive score (5 factors: feature breadth 30%, quality 25%, sentiment 15%, pricing 15%, scale 15%). <code>reporter.py</code> assembles findings into a structured daily brief with executive summary, scorecards, positioning chart, and prioritized recommendations.</p>
+            <p class="evidence-note">📁 <strong>Evidence:</strong> See generated <a href="https://github.com/agenticph-labs/p5-competitive-intel/blob/main/brief_2026-09-25.md" target="_blank" rel="noopener">today's daily brief</a> and <a href="https://github.com/agenticph-labs/p5-competitive-intel/blob/main/brief_sample.md" target="_blank" rel="noopener">sample brief</a> in the repository.</p>
+          </div>
+          <div class="case-section">
+            <h4>Result / Output</h4>
+            <p>The pipeline generates a complete daily brief in under a second (stdlib only, zero external deps). The brief includes: executive summary, per-competitor scorecards, composite competitive positioning, feature gap matrix, and 3–5 prioritized action recommendations. A Streamlit UI (<code>streamlit_ui.py</code>) provides an interactive overview for stakeholders who prefer a visual interface.</p>
+            <p class="evidence-note">🖼️ <strong>Screenshots:</strong> <em>To be captured — Markdown brief renders cleanly; Streamlit UI view planned.</em></p>
+          </div>
+          <div class="case-section">
+            <h4>Technical Details</h4>
+            <ul>
+              <li><strong>Stack:</strong> Python 3.13+ (stdlib only — zero external dependencies)</li>
+              <li><strong>Architecture:</strong> Collect → Analyze → Synthesize → Report; modular, independently testable stages</li>
+              <li><strong>Analysis:</strong> 5 engines — feature gap, sentiment, hiring signals, pricing, composite scoring</li>
+              <li><strong>Scoring:</strong> Weighted 5-factor competitive score with configurable weights</li>
+              <li><strong>Output:</strong> Markdown brief (stdout + file), JSON mode for API consumption, Streamlit UI</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4>Limitations &amp; Future Work</h4>
+            <ul>
+              <li>Data sources are simulated — real NewsAPI, LinkedIn, and Crunchbase integration is the next step</li>
+              <li>No persistent storage — each run starts fresh (intentional for a daily batch, but historical tracking needs a database)</li>
+              <li>Sentiment analysis is basic keyword-based — an LLM-based sentiment analyzer would improve nuance</li>
+              <li>Alert system (Slack/email notifications when a competitor passes a threshold) is not yet implemented</li>
+            </ul>
+          </div>
+          <div class="case-footer">
+            <a href="https://github.com/agenticph-labs/p5-competitive-intel" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CS6: Research Decision Market Entry -->
+      <article class="case-study" id="cs6">
+        <h3 class="case-title">Research-to-Decision: Philippine Specialty Coffee Market Entry</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>A mid-cap F&B group considering Philippine market entry needs a defensible, data-driven answer to "Should we enter the Philippine specialty coffee market?" Traditional consulting engagements take 8–12 weeks and cost PHP 1–3M. Smaller firms and startups lack the budget for bespoke market research but still need rigorous analysis before committing PHP 80–120M in entry investment.</p>
+          </div>
+          <div class="case-section">
+            <h4>Objective</h4>
+            <p>Produce a structured research-to-decision pipeline that answers a strategic business question through multi-dimensional analysis: market sizing, competitive analysis, pricing, customer segments, risk assessment, and investment recommendation — all documented with transparent methodology, assumptions, and evidence.</p>
+          </div>
+          <div class="case-section">
+            <h4>Approach</h4>
+            <p>We used a structured PICO/PESTEL → Data Collection → Market Sizing → Competitor Analysis → Pricing → Customer Segmentation → Risk Assessment → MCDA framework grounded in economics and strategic management theory. Multi-Criteria Decision Analysis (MCDA) with weighted scoring gives us a composite Go/No-go threshold (70/100) that is transparent, defensible, and adjustable. We preferred this over a simple pros-cons list because capital allocation decisions need weighted trade-offs.</p>
+          </div>
+          <div class="case-section">
+            <h4>Implementation</h4>
+            <p>The <code>market-entry-analysis.ipynb</code> Jupyter notebook walks through all 8 stages interactively. Data was collected from Philippine government sources (PSA, BSP), industry reports (Euromonitor, Kantar), and academic literature. Market sizing uses both top-down (total coffee market → specialty subsegment → addressable market) and bottom-up (store-unit economics × location capacity) approaches. Competitor analysis uses Porter's Five Forces + Strategic Group Mapping. The MCDA framework scores 7 dimensions with transparent weights, producing a 74.7/100 composite — a Conditional GO.</p>
+            <p class="evidence-note">📁 <strong>Evidence:</strong> See the <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/market-entry-report.md" target="_blank" rel="noopener">full decision report</a>, <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/market-entry-analysis.ipynb" target="_blank" rel="noopener">interactive notebook</a>, and <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/data/" target="_blank" rel="noopener">datasets</a>. Visual evidence: <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/competitor-map.png" target="_blank" rel="noopener">competitor map</a>, <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/market-sizing.png" target="_blank" rel="noopener">market sizing</a>, <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/mcda-scoring.png" target="_blank" rel="noopener">MCDA scoring</a>, <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/risk-heatmap.png" target="_blank" rel="noopener">risk heatmap</a>.</p>
+          </div>
+          <div class="case-section">
+            <h4>Result / Output</h4>
+            <p>Composite score: 74.7/100 — Conditional GO. Recommendation: Enter via phased strategy — launch 3 pilot stores in Metro Manila CBDs (BGC, Makati, Ortigas), validate unit economics over 12 months, then scale regionally with a capital-light franchise model. The output includes 7 visualization assets (competitor map, market sizing, customer segments, macro context, MCDA scoring, pricing benchmark, risk heatmap, unit economics).</p>
+            <p class="evidence-note">🖼️ <strong>Visual Assets (live):</strong> <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/competitor-map.png" target="_blank" rel="noopener">Competitor strategic group map</a>, <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/market-sizing.png" target="_blank" rel="noopener">Market sizing chart</a>, <a href="https://github.com/agenticph-labs/p6-research-decision/blob/main/risk-heatmap.png" target="_blank" rel="noopener">Risk heatmap</a> (all committed to repo).</p>
+          </div>
+          <div class="case-section">
+            <h4>Technical Details</h4>
+            <ul>
+              <li><strong>Stack:</strong> Python, Jupyter, pandas, matplotlib, seaborn</li>
+              <li><strong>Framework:</strong> PICO/PESTEL → MCDA with 7 weighted dimensions</li>
+              <li><strong>Analysis:</strong> Top-down + bottom-up market sizing, Porter's Five Forces, strategic group mapping, scenario analysis</li>
+              <li><strong>Risk:</strong> Regulatory, supply chain, competitive response, macroeconomic — each with mitigation strategies</li>
+              <li><strong>Output:</strong> 347-line decision report, interactive notebook, 7 visualization PNGs, 3 CSV datasets</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4>Limitations &amp; Future Work</h4>
+            <ul>
+              <li>Philippine-specific consumer survey data would strengthen customer segment assumptions</li>
+              <li>Real estate cost data by specific CBD location would improve bottom-up economics</li>
+              <li>Exchange rate sensitivity analysis (PHP/USD) is not modeled</li>
+              <li>Would benefit from a Streamlit frontend that lets users adjust MCDA weights and see real-time score changes</li>
+            </ul>
+          </div>
+          <div class="case-footer">
+            <a href="https://github.com/agenticph-labs/p6-research-decision" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES TAB ==================== -->
+  <section class="tab-content" id="tab-services" role="tabpanel">
+    <div class="section-page">
+      <div class="page-header">
+        <h2 class="section-title">Services</h2>
+        <div class="title-accent" aria-hidden="true">
+          <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
+        </div>
+        <p class="section-subtitle">Available via Paperclip, GitHub, and Upwork</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><text x="10" y="13" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">S1</text></svg>
+          </div>
+          <h4>AI Workflow Automation</h4>
+          <p>End-to-end automated pipelines for document processing, data extraction, and reporting. From PDF intake to structured output — no manual steps.</p>
+          <div class="service-meta">
+            <span class="service-tag">Streamlit deploy</span>
+            <span class="service-tag">Paperclip ready</span>
+          </div>
+          <div class="service-price">Starting at $500</div>
+        </div>
+        <div class="service-card">
+          <div class="service-num">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><text x="10" y="13" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">S2</text></svg>
+          </div>
+          <h4>Market Intelligence Dashboards</h4>
+          <p>Custom dashboards that track competitors, market trends, and customer sentiment in real time. Interactive Plotly charts, deployed to a working URL.</p>
+          <div class="service-meta">
+            <span class="service-tag">Streamlit deploy</span>
+            <span class="service-tag">Paperclip ready</span>
+          </div>
+          <div class="service-price">Starting at $750</div>
+        </div>
+        <div class="service-card">
+          <div class="service-num">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><text x="10" y="13" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">S3</text></svg>
+          </div>
+          <h4>Procurement AI Solutions</h4>
+          <p>RFP analysis, vendor scoring, and compliance checks powered by LLMs and structured data pipelines. From PDF to decision-ready report.</p>
+          <div class="service-meta">
+            <span class="service-tag">Streamlit deploy</span>
+            <span class="service-tag">Paperclip ready</span>
+          </div>
+          <div class="service-price">Starting at $1,000</div>
+        </div>
+        <div class="service-card">
+          <div class="service-num">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><text x="10" y="13" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">S4</text></svg>
+          </div>
+          <h4>Data Strategy &amp; Consulting</h4>
+          <p>From research scoping to production-ready data systems — strategy, architecture, and implementation. Structured research-to-decision pipelines.</p>
+          <div class="service-meta">
+            <span class="service-tag">Streamlit deploy</span>
+            <span class="service-tag">Paperclip ready</span>
+          </div>
+          <div class="service-price">Starting at $1,500</div>
+        </div>
+      </div>
+
+      <div class="services-note">
+        <div class="note-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <p>We deploy via Streamlit Cloud — you get a working URL, not a repo to clone. All services integrate with Paperclip for workflow management and delivery tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT TAB ==================== -->
+  <section class="tab-content" id="tab-contact" role="tabpanel">
+    <div class="section-page">
+      <div class="page-header">
+        <h2 class="section-title">Contact</h2>
+        <div class="title-accent" aria-hidden="true">
+          <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
+        </div>
+        <p class="section-subtitle">Let's build something.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="4" stroke="#0D7377" stroke-width="2" fill="none"/><path d="M4 12l16 10 16-10" stroke="#0D7377" stroke-width="2" fill="none"/></svg>
+          </div>
+          <h4>Email</h4>
+          <p>Get in touch directly for project inquiries and consulting engagements.</p>
+          <a href="mailto:agenticph@proton.me" class="contact-action">agenticph@proton.me →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#0D7377" stroke-width="2" fill="none"/><path d="M14 20h12M20 14v12" stroke="#D4A017" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h4>GitHub</h4>
+          <p>All projects, source code, and documentation. Fork, explore, contribute.</p>
+          <a href="https://github.com/agenticph-labs" class="contact-action" target="_blank" rel="noopener">github.com/agenticph-labs →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#0D7377" stroke-width="2" fill="none"/><path d="M20 12a4 4 0 00-4 4c0 4 4 6 4 10 0-4 4-6 4-10a4 4 0 00-4-4z" stroke="#D4A017" stroke-width="2" fill="none"/><circle cx="20" cy="12" r="1" fill="#D4A017"/></svg>
+          </div>
+          <h4>Upwork</h4>
+          <p>Hire us for custom AI projects, market research, and automation consulting.</p>
+          <a href="https://www.upwork.com/freelancers/agenticph" class="contact-action" target="_blank" rel="noopener">agenticph on Upwork →</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <p>Built with agenticPH Labs</p>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0D7377"/><text x="14" y="19" text-anchor="middle" fill="#F8FAFC" font-size="16" font-weight="700">A</text></svg>
+        <span>AgenticPH Labs</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" data-tab="about">About</a>
+        <a href="#" data-tab="projects">Projects</a>
+        <a href="#" data-tab="case-studies">Case Studies</a>
+        <a href="#" data-tab="services">Services</a>
+        <a href="#" data-tab="contact">Contact</a>
+      </div>
+      <p class="footer-copy">AI · Data · Business Systems — for the Philippine market.</p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
