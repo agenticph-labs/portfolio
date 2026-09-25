@@ -1,6 +1,4 @@
-/* ============================================================
-   agenticPH Labs — Portfolio JS
-   ============================================================ */
+/* agenticPH Labs - Portfolio JS */
 
 document.addEventListener("DOMContentLoaded", () => {
 
