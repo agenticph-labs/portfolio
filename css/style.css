@@ -668,6 +668,7 @@ body.dark .tag-data { background: rgba(184, 243, 74, 0.15); color: var(--accent2
   flex-direction: column;
   gap: 0.6rem;
   transition: transform 500ms, box-shadow 500ms;
+  cursor: pointer;
 }
 
 .help-card:hover {
@@ -690,6 +691,17 @@ body.dark .tag-data { background: rgba(184, 243, 74, 0.15); color: var(--accent2
 body.dark .help-card { background: var(--surface); border-color: var(--border); }
 body.dark .help-card h3 { color: var(--accent2); }
 body.dark .help-card p { color: var(--muted); }
+
+.help-closing-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 400ms;
+}
+.help-closing-link:hover {
+  color: var(--accent2);
+}
 
 .help-closing {
   max-width: 700px;
@@ -716,6 +728,7 @@ body.dark .help-card p { color: var(--muted); }
   display: flex;
   flex-direction: column;
   transition: transform 500ms, box-shadow 500ms;
+  cursor: pointer;
 }
 
 .resource-card:hover {
@@ -754,12 +767,17 @@ body.dark .help-card p { color: var(--muted); }
   background: rgba(200, 58, 50, 0.1);
   color: var(--accent2);
   align-self: flex-start;
+  margin-top: auto;
 }
 
 body.dark .resource-card { background: var(--surface); border-color: var(--border); }
 body.dark .resource-info h4 { color: var(--text); }
 body.dark .resource-info p { color: var(--muted); }
 body.dark .resource-badge { background: rgba(184, 243, 74, 0.15); color: var(--accent); }
+
+/* ---------- Selection (dark mode) ---------- */
+::selection { background: var(--accent); color: var(--bg); }
+body.dark ::selection { background: var(--accent); color: var(--bg); }
 
 /* ---------- Contact ---------- */
 .contact-grid {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgenticPH · AI · Data · Business Systems</title>
+  <title>AgenticPH · AI · Data · Systems</title>
   <meta name="description" content="AgenticPH builds practical AI systems for Philippine businesses · market intelligence, document analysis, automation, and research tools.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='37.6,40.1 39.0,7.7 51.4,37.6' fill='%230038A8'/><polygon points='63.0,54.1 81.6,73.0 55.9,66.3' fill='%230038A8'/><polygon points='38.1,66.3 9.8,74.5 31.0,54.1' fill='%230038A8'/><circle cx='47' cy='53' r='7.5' fill='%23FCD116'/></svg>">
   <link rel="stylesheet" href="css/style.css">
@@ -29,7 +29,7 @@
     <ul class="nav-links" id="nav-links" role="tablist">
       <li role="none"><button role="tab" data-tab="about" class="nav-link" aria-selected="false">About</button></li>
       <li role="none"><button role="tab" data-tab="samples" class="nav-link" aria-selected="false">Projects</button></li>
-      <li role="none"><button role="tab" data-tab="services" class="nav-link" aria-selected="false">What I Can Help With</button></li>
+      <li role="none"><button role="tab" data-tab="services" class="nav-link" aria-selected="false">Services</button></li>
       <li role="none"><button role="tab" data-tab="products" class="nav-link" aria-selected="false">Resources</button></li>
       <li role="none"><button role="tab" data-tab="contact" class="nav-link" aria-selected="false">Contact</button></li>
       <li role="none">
@@ -292,32 +292,68 @@
   <section class="tab-content" id="services" role="tabpanel">
     <div class="section-page">
       <div class="page-header">
-        <h2 class="section-title">What I Can Help With</h2>
+        <h2 class="section-title">Services</h2>
         <div class="title-accent" aria-hidden="true">
           <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
         </div>
-        <p class="section-subtitle">The kind of problems I know how to work on.</p>
+        <p class="section-subtitle">The problems I know how to work on.</p>
       </div>
 
       <div class="help-grid">
-        <div class="help-card">
+        <div class="help-card" data-card-type="service" data-card-index="0">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">&#x25B6; Demo</span>
+            </div>
+          </div>
           <h3>Research &amp; Analysis</h3>
           <p>Market research, competitive analysis, and structured research for decisions. I use a combination of data analysis, web research, and AI-assisted workflows to turn scattered information into usable findings.</p>
         </div>
-        <div class="help-card">
+        <div class="help-card" data-card-type="service" data-card-index="1">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">&#x25B6; Demo</span>
+            </div>
+          </div>
           <h3>Data &amp; Information Systems</h3>
           <p>Extracting, cleaning, structuring, and analyzing information from PDFs, websites, spreadsheets, APIs, and other sources.</p>
         </div>
-        <div class="help-card">
+        <div class="help-card" data-card-type="service" data-card-index="2">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">&#x25B6; Demo</span>
+            </div>
+          </div>
           <h3>AI &amp; Automation</h3>
           <p>Practical AI workflows for document processing, research, reporting, classification, and repetitive information tasks. I build with LLMs, Python, and automation platforms.</p>
         </div>
-        <div class="help-card">
+        <div class="help-card" data-card-type="service" data-card-index="3">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">&#x25B6; Demo</span>
+            </div>
+          </div>
           <h3>Custom Workflow Design</h3>
           <p>If you have a process that's messy, manual, or difficult to manage, I can help map it out, identify opportunities for improvement, and prototype a better approach.</p>
         </div>
       </div>
-      <p class="help-closing">Not sure whether your problem fits? Tell me what you're trying to accomplish. I'll give you an honest assessment of whether I can help.</p>
+      <p class="help-closing">Not sure whether your problem fits? <a href="#" onclick="switchTab('contact'); return false;" class="help-closing-link">Tell me</a> what you're trying to accomplish. I'll give you an honest assessment of whether I can help.</p>
     </div>
   </section>
 
@@ -333,7 +369,7 @@
       </div>
 
       <div class="resources-grid">
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="0">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -349,7 +385,7 @@
             <span class="resource-badge">Available on Gumroad / RaketPH</span>
           </div>
         </div>
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="1">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -365,7 +401,7 @@
             <span class="resource-badge">Available on Gumroad / RaketPH</span>
           </div>
         </div>
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="2">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -381,7 +417,7 @@
             <span class="resource-badge">Available on Gumroad / RaketPH</span>
           </div>
         </div>
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="3">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -397,7 +433,7 @@
             <span class="resource-badge">Available on Gumroad / RaketPH</span>
           </div>
         </div>
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="4">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -413,7 +449,7 @@
             <span class="resource-badge">Available on Gumroad / RaketPH</span>
           </div>
         </div>
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="5">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -429,7 +465,7 @@
             <span class="resource-badge">Available on Gumroad / RaketPH</span>
           </div>
         </div>
-        <div class="resource-card">
+        <div class="resource-card" data-card-type="product" data-card-index="6">
           <div class="video-placeholder" aria-label="Resource demo video placeholder">
             <div class="video-placeholder-inner">
               <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -521,7 +557,7 @@
       <div class="footer-row">
         <span class="footer-brand-item">
           <svg width="16" height="16" viewBox="0 0 100 100" fill="none"><polygon points="37.6,40.1 39.0,7.7 51.4,37.6" fill="#0038A8"/><polygon points="63.0,54.1 81.6,73.0 55.9,66.3" fill="#0038A8"/><polygon points="38.1,66.3 9.8,74.5 31.0,54.1" fill="#0038A8"/><circle cx="47" cy="53" r="7.5" fill="#FCD116"/></svg>
-          <span class="agentic">Agentic</span><span class="ph">PH</span>
+          <span class="brand-text"><span class="agentic">Agentic</span><span class="ph">PH</span></span>
         </span>
         <span class="footer-sep">|</span>
         <span>AI for the Philippine market.</span>
