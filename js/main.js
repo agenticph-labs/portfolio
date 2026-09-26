@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const productsData = [
     {
       title: 'AI Workflow Prompt Kit',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'No-Code Automation Templates (5-Pack)',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Presentation Deck Templates',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Portfolio Case Study System',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Research Report System',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Chatbot Blueprint',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Workflow Audit Checklist',
-      badge: 'Available on Gumroad',
+      badge: 'Available on Gumroad / RaketPH',
       sections: [
         {
           heading: 'Description',
@@ -506,6 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     els.navLinks.classList.remove('open');
   }
+  window.switchTab = switchTab;
 
   /* Handle clicks on data-tab elements in nav */
   els.navLinks.addEventListener('click', (e) => {

@@ -727,6 +727,12 @@ body.dark .tag-data { background: rgba(184, 243, 74, 0.15); color: var(--accent2
   margin: 0 auto;
 }
 
+/* AgenticPH brand split text */
+.agentic { color: #0038A8; }
+.ph { color: #CE1126; }
+body.dark .agentic { color: #FFFFFF; }
+body.dark .ph { color: #FCD116; }
+
 /* ---------- Contact Card Alignment ---------- */
 .contact-card {
   background: var(--surface);
@@ -749,9 +755,12 @@ body.dark .tag-data { background: rgba(184, 243, 74, 0.15); color: var(--accent2
 
 .contact-action {
   margin-top: auto;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: center;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--accent);
