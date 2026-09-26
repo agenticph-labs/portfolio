@@ -309,13 +309,13 @@ body.dark .scroll-arrow { color: #D4A017; }
 body.dark .chevron-arrow { border-color: #D4A017; }
 
 .chevron-arrow {
-  width: 20px;
+  width: 22px;
   height: 12px;
-  border-style: solid;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
   display: inline-block;
+  background: #0D7377;
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
 }
+body.dark .chevron-arrow { background: #D4A017; }
 
 /* ---------- About ---------- */
 /* ---------- About Text ---------- */
