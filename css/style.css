@@ -78,7 +78,6 @@ body.dark .role-sep { color: #D4A017; }
 body.dark .footer { background-color: #060b14; border-top-color: #1E293B; }
 body.dark .footer-tagline { color: #64748B; }
 body.dark .footer-credits { color: #94A3B8; }
-body.dark .footer-copy { color: #475569; }
 
 body.dark .video-placeholder { background: #1E293B; }
 
@@ -211,11 +210,11 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
   text-align: center;
-  padding: 8rem 2rem 2rem;
+  padding: 6rem 2rem 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -273,6 +272,32 @@ body.dark .btn-primary { background-color: #D4A017; color: #0a0f1a; }
 body.dark .btn-primary:hover { background-color: #C49314; box-shadow: 0 4px 12px rgba(212, 160, 23, 0.2); }
 body.dark .btn-secondary { color: #D4A017; border-color: #D4A017; }
 body.dark .btn-secondary:hover { background: rgba(212, 160, 23, 0.1); }
+
+/* ---------- Hero Scroll Arrow ---------- */
+.hero-scroll {
+  margin-top: 2rem;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #0D7377;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 400ms;
+  line-height: 1;
+}
+
+.scroll-arrow:hover { color: #D4A017; }
+
+body.dark .scroll-arrow { color: #D4A017; }
+body.dark .scroll-arrow:hover { color: #FBBF24; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
 
 /* ---------- About ---------- */
 /* ---------- About Text ---------- */
@@ -687,6 +712,7 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
   margin: 0 auto;
 }
 
+/* ---------- Contact Card Alignment ---------- */
 .contact-card {
   background: #fff;
   border: 1px solid #E2E8F0;
@@ -694,7 +720,34 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
   padding: 2rem;
   text-align: center;
   transition: transform 500ms, box-shadow 500ms;
+  display: flex;
+  flex-direction: column;
 }
+
+.contact-card p {
+  flex: 1;
+  margin-bottom: 1.25rem;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.contact-action {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0D7377;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 400ms;
+  font-family: inherit;
+}
+
+.contact-action:hover { color: #D4A017; }
 
 .contact-card:hover {
   transform: translateY(-4px);
@@ -712,29 +765,6 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
   margin-bottom: 0.5rem;
 }
 
-.contact-card p {
-  font-size: 0.88rem;
-  color: #475569;
-  margin-bottom: 1.25rem;
-  line-height: 1.55;
-}
-
-.contact-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #0D7377;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: color 400ms;
-  font-family: inherit;
-}
-
-.contact-action:hover { color: #D4A017; }
-
 /* ---------- Contact single-row ---------- */
 .contact-grid.single-row {
   display: flex;
@@ -748,6 +778,15 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
 .contact-grid.single-row .contact-card {
   flex: 1;
   min-width: 0;
+}
+
+/* ---------- Tab Title Clipping Fix ---------- */
+.tab-content:not(#about) {
+  padding-top: 80px;
+}
+
+.tab-content {
+  scroll-margin-top: 100px;
 }
 
 /* ---------- About tab visual separation ---------- */
@@ -950,18 +989,8 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
   gap: 0.4rem;
 }
 
-.footer-credits-sep {
-  color: #0D7377;
-  font-weight: 700;
-}
-
 .footer-right {
   text-align: right;
-}
-
-.footer-copy {
-  font-size: 0.8rem;
-  color: #64748B;
 }
 
 /* ---------- Responsive ---------- */
