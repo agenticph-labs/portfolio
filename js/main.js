@@ -1,6 +1,6 @@
 /**
- * AgenticPH Labs — Portfolio JS v2b
- * Tab navigation, project filtering with modal case studies, theme toggle
+ * AgenticPH Labs — Portfolio JS v2c
+ * Tab navigation, project/service/product filtering with modal popups, theme toggle
  * No external dependencies.
  */
 
@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   /* ===========================================
-     Project Data
+     Sample Project Data (for modals)
      =========================================== */
   const projectData = [
     {
-      title: 'Client Intake System',
+      displayName: 'Project Scope Engine',
+      originalName: 'Client Intake Automation',
+      title: 'Project Scope Engine < Client Intake Automation',
       accentClass: 'automation-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -49,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: 'PH Market Intelligence',
+      displayName: 'Market Analyzer',
+      originalName: 'PH Market Intelligence',
+      title: 'Market Analyzer < PH Market Intelligence',
       accentClass: 'data-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
@@ -86,7 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: 'RFP Analyzer',
+      displayName: 'Bid Intelligence Suite',
+      originalName: 'RFP Analyzer',
+      title: 'Bid Intelligence Suite < RFP Analyzer',
       accentClass: 'ai-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -123,7 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: 'Customer Feedback Intel',
+      displayName: 'Sentiment Compass',
+      originalName: 'Customer Feedback Intelligence',
+      title: 'Sentiment Compass < Customer Feedback Intelligence',
       accentClass: 'ai-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
@@ -160,7 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: 'Competitive Intel Brief',
+      displayName: 'Competitive Radar',
+      originalName: 'Competitive Intelligence',
+      title: 'Competitive Radar < Competitive Intelligence',
       accentClass: 'automation-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -197,7 +207,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      title: 'Market Entry Research',
+      displayName: 'Market Entry Compass',
+      originalName: 'Research Decision System',
+      title: 'Market Entry Compass < Research Decision System',
       accentClass: 'research-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -236,6 +248,147 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   /* ===========================================
+     Services Data (for modals)
+     =========================================== */
+  const servicesData = [
+    {
+      title: 'AI Workflow Automation',
+      price: '$500',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting. From PDF intake to structured output — no manual steps.</p>'
+        },
+        {
+          heading: 'What\'s Included',
+          body: '<ul><li>Custom pipeline design and development</li><li>Document parsing and data extraction</li><li>Automated reporting and export</li><li>Streamlit Cloud deployment</li><li>30-day support and maintenance</li></ul>'
+        },
+        {
+          heading: 'Technical Details',
+          body: '<ul><li><strong>Stack:</strong> Python, Streamlit, LLM integration as needed</li><li><strong>Delivery:</strong> Deployed to a working URL via Streamlit Cloud</li><li><strong>Timeline:</strong> 2–4 weeks depending on complexity</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'Market Intelligence Dashboards',
+      price: '$750',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Custom dashboards tracking competitors, market trends, and customer sentiment in real time. Interactive Plotly charts, deployed to a working URL.</p>'
+        },
+        {
+          heading: 'What\'s Included',
+          body: '<ul><li>Data pipeline design and implementation</li><li>Custom dashboard with 5+ interactive views</li><li>KPI cards and trend visualization</li><li>Streamlit Cloud deployment</li><li>Data source integration</li></ul>'
+        },
+        {
+          heading: 'Technical Details',
+          body: '<ul><li><strong>Stack:</strong> Python, pandas, Plotly, Streamlit</li><li><strong>Visualization:</strong> Interactive Plotly charts, KPI cards</li><li><strong>Timeline:</strong> 3–6 weeks depending on data sources</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'Procurement AI Solutions',
+      price: '$1,000',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>RFP analysis, vendor scoring, and compliance checks powered by LLMs and structured data pipelines. From PDF to decision-ready report.</p>'
+        },
+        {
+          heading: 'What\'s Included',
+          body: '<ul><li>RFP document parsing and extraction</li><li>Vendor scoring and evaluation framework</li><li>Compliance check automation</li><li>Decision-ready report generation</li><li>Streamlit Cloud deployment</li></ul>'
+        },
+        {
+          heading: 'Technical Details',
+          body: '<ul><li><strong>Stack:</strong> Python, PyMuPDF, OpenAI API / DeepSeek, Pydantic, Streamlit</li><li><strong>Architecture:</strong> PDF Parser → LLM Analyzer → Validation → UI</li><li><strong>Timeline:</strong> 4–8 weeks depending on scope</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'Data Strategy & Consulting',
+      price: '$1,500',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>From research scoping to production-ready data systems — strategy, architecture, and implementation. Structured research-to-decision pipelines.</p>'
+        },
+        {
+          heading: 'What\'s Included',
+          body: '<ul><li>Research scoping and methodology design</li><li>Data architecture and pipeline design</li><li>Production-ready system implementation</li><li>Documentation and handover</li><li>30-day post-deployment support</li></ul>'
+        },
+        {
+          heading: 'Technical Details',
+          body: '<ul><li><strong>Stack:</strong> Python, PostgreSQL, Streamlit, LLMs as needed</li><li><strong>Approach:</strong> Structured research-to-decision pipeline</li><li><strong>Timeline:</strong> 6–12 weeks depending on scope</li></ul>'
+        }
+      ]
+    }
+  ];
+
+  /* ===========================================
+     Products Data (for modals)
+     =========================================== */
+  const productsData = [
+    {
+      title: 'AI Proposal Template Pack',
+      price: '$25',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Ready-to-use proposal templates for AI consulting engagements. Includes scope definition, pricing frameworks, deliverable outlines, and client-ready formats.</p>'
+        },
+        {
+          heading: 'Contents',
+          body: '<ul><li>5 proposal templates (PDF + DOCX)</li><li>Pricing calculator spreadsheet</li><li>Scope definition worksheet</li><li>Client onboarding checklist</li></ul>'
+        },
+        {
+          heading: 'Format',
+          body: '<p>Digital download. PDF, DOCX, and XLSX formats. Compatible with Google Docs and Microsoft Office.</p>'
+        }
+      ]
+    },
+    {
+      title: 'Market Analysis Workbook',
+      price: '$35',
+      badge: 'Available on Raket.ph',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Structured framework for Philippine market entry research. Step-by-step methodology covering market sizing, competitor analysis, and go-to-market strategy.</p>'
+        },
+        {
+          heading: 'Contents',
+          body: '<ul><li>Market sizing templates</li><li>Competitor analysis matrix</li><li>PESTEL analysis framework</li><li>Go-to-market strategy canvas</li></ul>'
+        },
+        {
+          heading: 'Format',
+          body: '<p>Digital download. PDF workbook with fillable fields plus XLSX templates.</p>'
+        }
+      ]
+    },
+    {
+      title: 'Automation Blueprint Bundle',
+      price: '$50',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Technical blueprints for common business automation patterns. Includes architecture diagrams, code templates, and deployment guides for Python-based automation pipelines.</p>'
+        },
+        {
+          heading: 'Contents',
+          body: '<ul><li>5 automation blueprint documents (PDF)</li><li>Python code templates (ZIP)</li><li>Architecture diagrams (PNG + draw.io)</li><li>Deployment guides (PDF)</li></ul>'
+        },
+        {
+          heading: 'Format',
+          body: '<p>Digital download. PDF, PNG, draw.io, ZIP with Python templates.</p>'
+        }
+      ]
+    }
+  ];
+
+  /* ===========================================
      DOM References
      =========================================== */
   const els = {
@@ -246,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabContents: document.querySelectorAll('.tab-content'),
     filterTabs: document.querySelectorAll('.filter-tab'),
     projectCards: document.querySelectorAll('.project-card'),
-    heroCta: document.querySelector('.hero-cta'),
+    heroCtaSamples: document.querySelector('.hero-cta-samples'),
     modalOverlay: document.getElementById('modal-overlay'),
     modalContent: document.getElementById('modal-content'),
     modalClose: document.getElementById('modal-close'),
@@ -286,6 +439,14 @@ document.addEventListener('DOMContentLoaded', () => {
     switchTab(link.dataset.tab);
   });
 
+  /* Handle clicks on non-nav-link elements with data-tab (hero buttons, etc.) */
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-tab]:not(.nav-link)');
+    if (!trigger) return;
+    e.preventDefault();
+    switchTab(trigger.dataset.tab);
+  });
+
   /* ===========================================
      Mobile Nav Toggle
      =========================================== */
@@ -294,15 +455,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ===========================================
-     Hero CTA -> Projects Tab
+     Hero CTA -> Samples Tab
      =========================================== */
-  els.heroCta.addEventListener('click', (e) => {
-    e.preventDefault();
-    switchTab('projects');
-  });
+  if (els.heroCtaSamples) {
+    els.heroCtaSamples.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab('samples');
+    });
+  }
 
   /* ===========================================
-     Project Category Filtering
+     Project/Sample Category Filtering
      =========================================== */
   els.filterTabs.forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -321,21 +484,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ===========================================
-     Modal: Open
+     Modal: Open (supports samples, services, products)
      =========================================== */
-  function openModal(index) {
-    const project = projectData[index];
-    if (!project) return;
+  function openModal(type, index) {
+    let data;
+    if (type === 'sample') data = projectData[index];
+    else if (type === 'service') data = servicesData[index];
+    else if (type === 'product') data = productsData[index];
+    if (!data) return;
 
-    let html = `<h3>${project.title}</h3>`;
+    let html = `<h3>${data.title}</h3>`;
 
-    project.sections.forEach((section) => {
+    if (data.price) {
+      html += `<div class="modal-price">${data.price}</div>`;
+    }
+    if (data.badge) {
+      html += `<span class="modal-badge">${data.badge}</span>`;
+    }
+
+    data.sections.forEach((section) => {
       html += `<div class="modal-section"><h4>${section.heading}</h4>${section.body}</div>`;
     });
 
-    html += `<div class="modal-footer">
-      <a href="${project.githubUrl}" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
-    </div>`;
+    // Show GitHub button for sample projects
+    if (type === 'sample' && data.githubUrl) {
+      html += `<div class="modal-footer">
+        <a href="${data.githubUrl}" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>`;
+    }
 
     els.modalContent.innerHTML = html;
     els.modalOverlay.classList.add('open');
@@ -350,12 +526,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  /* Click handler for all card types */
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-card-type]');
+    if (!card) return;
+    if (e.target.closest('a, button')) return;
+
+    const type = card.dataset.cardType;
+    const index = parseInt(card.dataset.cardIndex, 10);
+    if (type && !isNaN(index)) {
+      openModal(type, index);
+    }
+  });
+
+  /* Also handle project cards with data-project-index (legacy) */
   els.projectCards.forEach((card) => {
     card.addEventListener('click', (e) => {
-      if (e.target.closest('a, button')) return;
+      if (e.target.closest('a, button, [data-card-type]')) return;
       const index = parseInt(card.dataset.projectIndex, 10);
       if (!isNaN(index)) {
-        openModal(index);
+        openModal('sample', index);
       }
     });
   });
@@ -400,8 +590,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===========================================
      Init: Read URL hash for initial tab
      =========================================== */
+  const validTabs = ['about', 'samples', 'services', 'products', 'contact'];
   const hash = window.location.hash.replace('#', '');
-  const validTabs = ['about', 'projects', 'services', 'contact'];
   if (validTabs.includes(hash)) {
     switchTab(hash);
   } else {
