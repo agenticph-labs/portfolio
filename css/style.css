@@ -728,7 +728,7 @@ body.dark .tag-data { background: rgba(184, 243, 74, 0.15); color: var(--accent2
 }
 
 /* AgenticPH brand split text */
-.agentic { color: #0038A8; }
+.agentic { color: #1B1E28; }
 .ph { color: #CE1126; }
 body.dark .agentic { color: #FFFFFF; }
 body.dark .ph { color: #FCD116; }
