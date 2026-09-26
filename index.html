@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgenticPH Labs — AI · Data · Business Systems</title>
-  <meta name="description" content="AgenticPH Labs builds practical AI systems for Philippine businesses — market intelligence, document analysis, automation, and research tools.">
+  <title>Agentic PH — AI · Data · Business Systems</title>
+  <meta name="description" content="Agentic PH builds practical AI systems for Philippine businesses — market intelligence, document analysis, automation, and research tools.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D7377'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23F8FAFC'>A</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,24 +12,24 @@
 
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar" role="navigation">
-    <a href="#" class="nav-brand" data-tab="about" aria-label="Home">
+    <button class="nav-brand" data-tab="about" aria-label="Home">
       <svg class="brand-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="28" height="28" rx="6" fill="#0D7377"/>
         <text x="14" y="19" text-anchor="middle" fill="#F8FAFC" font-size="16" font-weight="700">A</text>
       </svg>
-      <span>AgenticPH Labs</span>
-    </a>
+      <span>Agentic PH</span>
+    </button>
     <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
     </button>
     <ul class="nav-links" id="nav-links" role="tablist">
-      <li role="none"><a href="#" role="tab" data-tab="about" class="nav-link" aria-selected="false">About</a></li>
-      <li role="none"><a href="#" role="tab" data-tab="samples" class="nav-link" aria-selected="false">Samples</a></li>
-      <li role="none"><a href="#" role="tab" data-tab="services" class="nav-link" aria-selected="false">Services</a></li>
-      <li role="none"><a href="#" role="tab" data-tab="products" class="nav-link" aria-selected="false">Products</a></li>
-      <li role="none"><a href="#" role="tab" data-tab="contact" class="nav-link" aria-selected="false">Contact</a></li>
+      <li role="none"><button role="tab" data-tab="about" class="nav-link" aria-selected="false">About</button></li>
+      <li role="none"><button role="tab" data-tab="samples" class="nav-link" aria-selected="false">Samples</button></li>
+      <li role="none"><button role="tab" data-tab="services" class="nav-link" aria-selected="false">Services</button></li>
+      <li role="none"><button role="tab" data-tab="products" class="nav-link" aria-selected="false">Products</button></li>
+      <li role="none"><button role="tab" data-tab="contact" class="nav-link" aria-selected="false">Contact</button></li>
       <li role="none">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
           <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -39,51 +39,22 @@
     </ul>
   </nav>
 
-  <!-- ==================== HERO (default landing view) ==================== -->
-  <section class="tab-content active" id="hero" role="tabpanel">
-    <div class="hero">
-      <div class="hero-bg-pattern" aria-hidden="true">
-        <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="hex-grid" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
-              <path d="M30 0 L60 15 L60 37 L30 52 L0 37 L0 15 Z" fill="none" stroke="#0D7377" stroke-width="0.5" opacity="0.07"/>
-            </pattern>
-            <linearGradient id="hero-grad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#0D7377" stop-opacity="0.03"/>
-              <stop offset="50%" stop-color="#D4A017" stop-opacity="0.04"/>
-              <stop offset="100%" stop-color="#475569" stop-opacity="0.02"/>
-            </linearGradient>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hero-grad)"/>
-          <rect width="100%" height="100%" fill="url(#hex-grid)"/>
-          <circle cx="100" cy="80" r="120" fill="#0D7377" opacity="0.025"/>
-          <circle cx="700" cy="500" r="160" fill="#D4A017" opacity="0.025"/>
-          <circle cx="500" cy="60" r="80" fill="#475569" opacity="0.02"/>
-        </svg>
-      </div>
+  <!-- ==================== ABOUT TAB (with integrated Hero) ==================== -->
+  <section class="tab-content active" id="about" role="tabpanel">
+    <!-- Hero Section -->
+    <div class="hero" id="about-hero">
       <div class="hero-content">
-        <div class="hero-badge">AgenticPH Labs</div>
+        <div class="hero-badge">Agentic PH</div>
         <h1>AI <span class="accent-gold">|</span> Data <span class="accent-gold">|</span> Business Systems</h1>
         <p class="hero-tagline">Analyze · Automate · Orchestrate — for the Philippine market.</p>
         <div class="hero-actions">
-          <a href="#" class="btn btn-primary" data-tab="about">About Us</a>
-          <a href="#" class="btn btn-secondary hero-cta-samples" data-tab="samples">View Our Work</a>
+          <button class="btn btn-primary" data-tab="samples">View Our Work</button>
+          <button class="btn btn-secondary" data-tab="contact">Get in Touch</button>
         </div>
-        <div class="hero-divider" aria-hidden="true">
-          <svg width="200" height="20" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="10" y1="10" x2="190" y2="10" stroke="#0D7377" stroke-width="1" opacity="0.3"/>
-            <circle cx="100" cy="10" r="4" fill="#D4A017" opacity="0.6"/>
-            <circle cx="70" cy="10" r="2" fill="#0D7377" opacity="0.3"/>
-            <circle cx="130" cy="10" r="2" fill="#0D7377" opacity="0.3"/>
-          </svg>
-        </div>
-        <p class="hero-sub">AI · Data · Business Systems — for the Philippine market.</p>
       </div>
     </div>
-  </section>
 
-  <!-- ==================== ABOUT TAB ==================== -->
-  <section class="tab-content" id="about" role="tabpanel">
+    <!-- About body -->
     <div class="section-page">
       <div class="page-header">
         <h2 class="section-title">About</h2>
@@ -95,7 +66,7 @@
       <div class="about-grid">
         <div class="about-main">
           <p class="about-lead">AI · Data · Business Systems — for the Philippine market.</p>
-          <p>About content — text provided by client. Replace this placeholder.</p>
+          <p>About body text — content provided by client. Replace this placeholder.</p>
 
           <!-- Technology Stack -->
           <div class="stack-section">
@@ -103,43 +74,45 @@
             <div class="stack-list">
               <div class="stack-item">
                 <strong>Python</strong>
-                <span>Core language for data processing, automation pipelines, and AI integration</span>
+                <span>Core automation, data processing, and AI/ML pipelines</span>
               </div>
               <div class="stack-item">
                 <strong>Streamlit</strong>
-                <span>Rapid web application framework for interactive dashboards and tools</span>
+                <span>Rapid dashboard and prototype deployment</span>
               </div>
               <div class="stack-item">
-                <strong>LLMs (OpenAI/DeepSeek)</strong>
-                <span>Large language models for document analysis, summarization, and intelligent extraction</span>
+                <strong>LLMs (GPT-4, Claude, DeepSeek)</strong>
+                <span>Document intelligence, analysis, and natural language interfaces</span>
               </div>
               <div class="stack-item">
-                <strong>NLP (spaCy/NLTK)</strong>
-                <span>Natural Language Processing for sentiment analysis, entity recognition, and text classification</span>
+                <strong>NumPy / Pandas</strong>
+                <span>Data analysis, statistical modeling, and numerical computation</span>
               </div>
               <div class="stack-item">
-                <strong>PostgreSQL + pgvector</strong>
-                <span>Database with vector search for semantic memory and retrieval-augmented generation</span>
+                <strong>n8n / Make</strong>
+                <span>Workflow automation and multi-service orchestration</span>
               </div>
               <div class="stack-item">
-                <strong>Pandas/Plotly</strong>
-                <span>Data manipulation and interactive visualization for market intelligence dashboards</span>
+                <strong>Power BI</strong>
+                <span>Data visualization, business intelligence dashboards, and stakeholder reporting</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Role Credits -->
-          <div class="role-credits">
-            <span>The Architect (Nathaniel)</span>
-            <span class="role-sep">·</span>
-            <span>The Orchestrator (Cephalon Cy)</span>
-            <span class="role-sep">·</span>
-            <span>The Builder (Cephalon Suda)</span>
-          </div>
-        </div>
+        <!-- Visual placeholder (no SVG decoration) -->
         <div class="about-visual" aria-hidden="true">
-          <div class="about-placeholder">Visual — content TBD</div>
+          <div class="about-placeholder" id="about-visual-placeholder">Visual — content TBD</div>
         </div>
+      </div>
+
+      <!-- Role Credits -->
+      <div class="role-credits">
+        <span>Designed by Nathaniel 🔷</span>
+        <span class="role-sep">·</span>
+        <span>Orchestrated by Cephalon Cy ⚙️</span>
+        <span class="role-sep">·</span>
+        <span>Built by Cephalon Suda 🛠️</span>
       </div>
     </div>
   </section>
@@ -174,7 +147,7 @@
                   <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                   <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
                 </svg>
-                <span class="video-placeholder-text">Demo Video</span>
+                <span class="video-placeholder-text">▶ Demo</span>
               </div>
             </div>
             <h3>Project Scope Engine</h3>
@@ -183,7 +156,7 @@
             <div class="card-tags">
               <span class="tag tag-automation">Automation</span>
             </div>
-            <span class="status-badge status-demo">Demo-ready</span>
+            <span class="status-badge status-deployed">Deployed</span>
           </div>
         </div>
 
@@ -197,7 +170,7 @@
                   <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                   <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
                 </svg>
-                <span class="video-placeholder-text">Demo Video</span>
+                <span class="video-placeholder-text">▶ Demo</span>
               </div>
             </div>
             <h3>Market Analyzer</h3>
@@ -221,7 +194,7 @@
                   <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                   <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
                 </svg>
-                <span class="video-placeholder-text">Demo Video</span>
+                <span class="video-placeholder-text">▶ Demo</span>
               </div>
             </div>
             <h3>Bid Intelligence Suite</h3>
@@ -234,7 +207,7 @@
           </div>
         </div>
 
-        <!-- S4 Sentiment Compass / Customer Feedback Intelligence -->
+        <!-- S4 Sentiment Compass / Customer Feedback Intel -->
         <div class="project-card" data-categories="ai" data-card-type="sample" data-card-index="3">
           <div class="card-accent ai-accent"></div>
           <div class="card-body">
@@ -244,21 +217,21 @@
                   <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                   <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
                 </svg>
-                <span class="video-placeholder-text">Demo Video</span>
+                <span class="video-placeholder-text">▶ Demo</span>
               </div>
             </div>
             <h3>Sentiment Compass</h3>
-            <p class="card-original-name">Customer Feedback Intelligence</p>
+            <p class="card-original-name">Customer Feedback Intel</p>
             <p>Sentiment analysis + NLP pipeline that turns raw customer reviews into actionable product and service insights.</p>
             <div class="card-tags">
               <span class="tag tag-ai">AI</span>
               <span class="tag tag-data">Data</span>
             </div>
-            <span class="status-badge status-deployed">Deployed</span>
+            <span class="status-badge status-demo">Demo-ready</span>
           </div>
         </div>
 
-        <!-- S5 Competitive Radar / Competitive Intelligence -->
+        <!-- S5 Competitive Radar / Competitive Intel -->
         <div class="project-card" data-categories="automation" data-card-type="sample" data-card-index="4">
           <div class="card-accent automation-accent"></div>
           <div class="card-body">
@@ -268,11 +241,11 @@
                   <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                   <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
                 </svg>
-                <span class="video-placeholder-text">Demo Video</span>
+                <span class="video-placeholder-text">▶ Demo</span>
               </div>
             </div>
             <h3>Competitive Radar</h3>
-            <p class="card-original-name">Competitive Intelligence</p>
+            <p class="card-original-name">Competitive Intel</p>
             <p>Automated daily competitor analysis — scrapes news, tracks positioning changes, distills into a one-page brief.</p>
             <div class="card-tags">
               <span class="tag tag-automation">Automation</span>
@@ -292,7 +265,7 @@
                   <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                   <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
                 </svg>
-                <span class="video-placeholder-text">Demo Video</span>
+                <span class="video-placeholder-text">▶ Demo</span>
               </div>
             </div>
             <h3>Market Entry Compass</h3>
@@ -326,16 +299,17 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>AI Workflow Automation</h4>
-          <p>End-to-end automated pipelines for document processing, data extraction, and reporting.</p>
+          <h4>Product Research &amp; Market Analysis</h4>
+          <p>In-depth market sizing, competitor landscaping, and demand analysis for Philippine market entry and product strategy.</p>
           <div class="service-meta">
-            <span class="service-tag">Automation</span>
-            <span class="service-tag">AI</span>
+            <span class="service-tag">Research</span>
+            <span class="service-tag">Data</span>
           </div>
-          <div class="service-price">$500</div>
+          <div class="service-price">$35–$65</div>
+          <div class="service-type">Fixed-price project</div>
         </div>
         <div class="service-card clickable-card" data-card-type="service" data-card-index="1">
           <div class="video-placeholder">
@@ -344,16 +318,17 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>Market Intelligence Dashboards</h4>
-          <p>Custom dashboards tracking competitors, market trends, and customer sentiment in real time.</p>
+          <h4>Data Extraction &amp; Processing</h4>
+          <p>Clean, transform, and structure data from PDFs, websites, spreadsheets, and APIs into analysis-ready formats.</p>
           <div class="service-meta">
             <span class="service-tag">Data</span>
-            <span class="service-tag">Visualization</span>
+            <span class="service-tag">Automation</span>
           </div>
-          <div class="service-price">$750</div>
+          <div class="service-price">$35–$80</div>
+          <div class="service-type">Fixed-price project</div>
         </div>
         <div class="service-card clickable-card" data-card-type="service" data-card-index="2">
           <div class="video-placeholder">
@@ -362,16 +337,17 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>Procurement AI Solutions</h4>
-          <p>RFP analysis, vendor scoring, and compliance checks powered by LLMs.</p>
+          <h4>AI Workflow Automation Setup</h4>
+          <p>End-to-end automated pipelines for document processing, data extraction, and reporting using LLMs and n8n/Make.</p>
           <div class="service-meta">
             <span class="service-tag">AI</span>
-            <span class="service-tag">Procurement</span>
+            <span class="service-tag">Automation</span>
           </div>
-          <div class="service-price">$1,000</div>
+          <div class="service-price">$75–$200</div>
+          <div class="service-type">Fixed-price project</div>
         </div>
         <div class="service-card clickable-card" data-card-type="service" data-card-index="3">
           <div class="video-placeholder">
@@ -380,16 +356,17 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>Data Strategy &amp; Consulting</h4>
-          <p>Research scoping, data architecture, and production-ready data systems.</p>
+          <h4>AI Orchestrator Retainer</h4>
+          <p>Ongoing AI strategy, custom tool development, workflow maintenance, and priority support for your business systems.</p>
           <div class="service-meta">
+            <span class="service-tag">AI</span>
             <span class="service-tag">Consulting</span>
-            <span class="service-tag">Data</span>
           </div>
-          <div class="service-price">$1,500</div>
+          <div class="service-price">$2,000–$5,000/mo</div>
+          <div class="service-type">Monthly retainer</div>
         </div>
       </div>
 
@@ -397,7 +374,7 @@
         <div class="note-icon" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <p>We deploy via Streamlit Cloud and GitHub Pages — you get a working URL, not a repo to clone.</p>
+        <p>Available on Upwork — fixed-price projects and monthly retainers. Contact us to discuss scope and timeline.</p>
       </div>
     </div>
   </section>
@@ -410,7 +387,7 @@
         <div class="title-accent" aria-hidden="true">
           <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
         </div>
-        <p class="section-subtitle">Ready-to-use digital products. Placeholders — replace with actual Gumroad/Raket.ph listings.</p>
+        <p class="section-subtitle">Ready-to-use digital products available on Gumroad.</p>
       </div>
 
       <div class="products-grid">
@@ -421,12 +398,12 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>AI Proposal Template Pack</h4>
-          <p>Ready-to-use proposal templates for AI consulting engagements.</p>
-          <div class="product-price">$25</div>
+          <h4>AI Workflow Prompt Kit</h4>
+          <p>50+ prompts for business automation — content generation, analysis, summarization, and decision support.</p>
+          <div class="product-price">$7</div>
           <span class="product-badge badge-gumroad">Available on Gumroad</span>
         </div>
         <div class="product-card clickable-card" data-card-type="product" data-card-index="1">
@@ -436,13 +413,13 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>Market Analysis Workbook</h4>
-          <p>Structured framework for Philippine market entry research.</p>
-          <div class="product-price">$35</div>
-          <span class="product-badge badge-raketh">Available on Raket.ph</span>
+          <h4>No-Code Automation Templates (5-Pack)</h4>
+          <p>Ready-to-import n8n workflows for common business processes — lead capture, invoice processing, email triage, and more.</p>
+          <div class="product-price">$19</div>
+          <span class="product-badge badge-gumroad">Available on Gumroad</span>
         </div>
         <div class="product-card clickable-card" data-card-type="product" data-card-index="2">
           <div class="video-placeholder">
@@ -451,12 +428,72 @@
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
                 <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
               </svg>
-              <span class="video-placeholder-text">Demo Video</span>
+              <span class="video-placeholder-text">▶ Demo</span>
             </div>
           </div>
-          <h4>Automation Blueprint Bundle</h4>
-          <p>Technical blueprints for common business automation patterns.</p>
-          <div class="product-price">$50</div>
+          <h4>Presentation Deck Templates</h4>
+          <p>Professional slide decks for client pitches, investor updates, and boardroom presentations. $9 (basic) / $19 (premium).</p>
+          <div class="product-price">$9 / $19</div>
+          <span class="product-badge badge-gumroad">Available on Gumroad</span>
+        </div>
+        <div class="product-card clickable-card" data-card-type="product" data-card-index="3">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">▶ Demo</span>
+            </div>
+          </div>
+          <h4>Portfolio Case Study System</h4>
+          <p>Case study templates for consultants and agencies. Free (basic) / $7 (pro with frameworks and design assets).</p>
+          <div class="product-price">Free / $7</div>
+          <span class="product-badge badge-gumroad">Available on Gumroad</span>
+        </div>
+        <div class="product-card clickable-card" data-card-type="product" data-card-index="4">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">▶ Demo</span>
+            </div>
+          </div>
+          <h4>Research Report System</h4>
+          <p>Research frameworks and report templates. $9 (basic) / $19 (pro) / $24 (enterprise with data pipelines).</p>
+          <div class="product-price">$9 / $19 / $24</div>
+          <span class="product-badge badge-gumroad">Available on Gumroad</span>
+        </div>
+        <div class="product-card clickable-card" data-card-type="product" data-card-index="5">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">▶ Demo</span>
+            </div>
+          </div>
+          <h4>AI Chatbot Blueprint</h4>
+          <p>Build custom chatbots for customer support, lead qualification, and internal knowledge bases. $9 (basic) / $14 (pro).</p>
+          <div class="product-price">$9 / $14</div>
+          <span class="product-badge badge-gumroad">Available on Gumroad</span>
+        </div>
+        <div class="product-card clickable-card" data-card-type="product" data-card-index="6">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg class="play-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <polygon points="18,14 18,34 34,24" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <span class="video-placeholder-text">▶ Demo</span>
+            </div>
+          </div>
+          <h4>Workflow Audit Checklist</h4>
+          <p>Business process audit toolkit. Free (basic checklist) / $5 (full audit workbook with scoring and recommendations).</p>
+          <div class="product-price">Free / $5</div>
           <span class="product-badge badge-gumroad">Available on Gumroad</span>
         </div>
       </div>
@@ -481,7 +518,10 @@
           </div>
           <h4>Email</h4>
           <p>Get in touch directly for project inquiries and consulting engagements.</p>
-          <a href="mailto:caronan.nat@gmail.com" class="contact-action">caronan.nat@gmail.com →</a>
+          <button class="contact-action" onclick="window.location.href='mailto:caronan.nat@gmail.com'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            caronan.nat@gmail.com
+          </button>
         </div>
         <div class="contact-card">
           <div class="contact-icon">
@@ -495,14 +535,10 @@
           </div>
           <h4>LinkedIn</h4>
           <p>Connect, follow project updates, and view professional background.</p>
-          <a href="https://linkedin.com/in/" class="contact-action" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
+          <button class="contact-action" onclick="window.open('https://www.linkedin.com/in/nathaniel-caronan-8b68a5329/?originalSubdomain=ph','_blank')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             Nathaniel C.
-          </a>
+          </button>
         </div>
         <div class="contact-card">
           <div class="contact-icon">
@@ -510,7 +546,10 @@
           </div>
           <h4>Upwork</h4>
           <p>Hire us for custom AI projects, market research, and automation consulting.</p>
-          <a href="https://www.upwork.com/freelancers/agenticph" class="contact-action" target="_blank" rel="noopener">agenticph on Upwork →</a>
+          <button class="contact-action" onclick="window.open('https://www.upwork.com/freelancers/agenticph','_blank')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            agenticph on Upwork
+          </button>
         </div>
       </div>
     </div>
@@ -533,13 +572,25 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-brand">
-        <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0D7377"/><text x="14" y="19" text-anchor="middle" fill="#F8FAFC" font-size="16" font-weight="700">A</text></svg>
-        <span>AgenticPH Labs</span>
+      <div class="footer-left">
+        <div class="footer-brand">
+          <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0D7377"/><text x="14" y="19" text-anchor="middle" fill="#F8FAFC" font-size="16" font-weight="700">A</text></svg>
+          <span>Agentic PH</span>
+        </div>
+        <p class="footer-tagline">AI · Data · Business Systems — for the Philippine market.</p>
       </div>
-      <p class="footer-tagline">AI · Data · Business Systems</p>
-      <p class="footer-credits">The Architect · The Orchestrator · The Builder</p>
-      <p class="footer-copy">&copy; 2026 AgenticPH Labs</p>
+      <div class="footer-center">
+        <p class="footer-credits">
+          <span>Designed by Nathaniel 🔷</span>
+          <span class="footer-credits-sep">·</span>
+          <span>Orchestrated by Cephalon Cy ⚙️</span>
+          <span class="footer-credits-sep">·</span>
+          <span>Built by Cephalon Suda 🛠️</span>
+        </p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; 2026 Agentic PH</p>
+      </div>
     </div>
   </footer>
 

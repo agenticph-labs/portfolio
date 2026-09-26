@@ -1,5 +1,5 @@
 /**
- * AgenticPH Labs — Portfolio JS v2c
+ * Agentic PH — Portfolio JS v2d
  * Tab navigation, project/service/product filtering with modal popups, theme toggle
  * No external dependencies.
  */
@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       displayName: 'Project Scope Engine',
       originalName: 'Client Intake Automation',
-      title: 'Project Scope Engine < Client Intake Automation',
+      title: 'Project Scope Engine &lt; Client Intake Automation',
       accentClass: 'automation-accent',
-      statusClass: 'status-demo',
-      statusLabel: 'Demo-ready',
+      statusClass: 'status-deployed',
+      statusLabel: 'Deployed',
       githubUrl: 'https://github.com/agenticph-labs/p1-client-intake',
       sections: [
         {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       displayName: 'Market Analyzer',
       originalName: 'PH Market Intelligence',
-      title: 'Market Analyzer < PH Market Intelligence',
+      title: 'Market Analyzer &lt; PH Market Intelligence',
       accentClass: 'data-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       displayName: 'Bid Intelligence Suite',
       originalName: 'RFP Analyzer',
-      title: 'Bid Intelligence Suite < RFP Analyzer',
+      title: 'Bid Intelligence Suite &lt; RFP Analyzer',
       accentClass: 'ai-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -130,11 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       displayName: 'Sentiment Compass',
-      originalName: 'Customer Feedback Intelligence',
-      title: 'Sentiment Compass < Customer Feedback Intelligence',
+      originalName: 'Customer Feedback Intel',
+      title: 'Sentiment Compass &lt; Customer Feedback Intel',
       accentClass: 'ai-accent',
-      statusClass: 'status-deployed',
-      statusLabel: 'Deployed',
+      statusClass: 'status-demo',
+      statusLabel: 'Demo-ready',
       githubUrl: 'https://github.com/agenticph-labs/p4-customer-feedback-intel',
       sections: [
         {
@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       displayName: 'Competitive Radar',
-      originalName: 'Competitive Intelligence',
-      title: 'Competitive Radar < Competitive Intelligence',
+      originalName: 'Competitive Intel',
+      title: 'Competitive Radar &lt; Competitive Intel',
       accentClass: 'automation-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       displayName: 'Market Entry Compass',
       originalName: 'Research Decision System',
-      title: 'Market Entry Compass < Research Decision System',
+      title: 'Market Entry Compass &lt; Research Decision System',
       accentClass: 'research-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
@@ -252,74 +252,78 @@ document.addEventListener('DOMContentLoaded', () => {
      =========================================== */
   const servicesData = [
     {
-      title: 'AI Workflow Automation',
-      price: '$500',
+      title: 'Product Research &amp; Market Analysis',
+      price: '$35–$65',
+      type: 'Fixed-price project',
       sections: [
         {
           heading: 'Description',
-          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting. From PDF intake to structured output — no manual steps.</p>'
+          body: '<p>In-depth market sizing, competitor landscaping, and demand analysis for Philippine market entry and product strategy. Delivers actionable insights backed by data.</p>'
         },
         {
-          heading: 'What\'s Included',
-          body: '<ul><li>Custom pipeline design and development</li><li>Document parsing and data extraction</li><li>Automated reporting and export</li><li>Streamlit Cloud deployment</li><li>30-day support and maintenance</li></ul>'
+          heading: "What's Included",
+          body: '<ul><li>Market sizing (TAM, SAM, SOM) and growth projections</li><li>Competitive landscape analysis with positioning maps</li><li>Customer segment profiling and demand estimation</li><li>Structured research report with data visualizations</li><li>One revision cycle included</li></ul>'
         },
         {
-          heading: 'Technical Details',
-          body: '<ul><li><strong>Stack:</strong> Python, Streamlit, LLM integration as needed</li><li><strong>Delivery:</strong> Deployed to a working URL via Streamlit Cloud</li><li><strong>Timeline:</strong> 2–4 weeks depending on complexity</li></ul>'
+          heading: 'Timeline',
+          body: '<p>1–2 weeks depending on scope. Delivered as PDF report plus editable spreadsheet models.</p>'
         }
       ]
     },
     {
-      title: 'Market Intelligence Dashboards',
-      price: '$750',
+      title: 'Data Extraction &amp; Processing',
+      price: '$35–$80',
+      type: 'Fixed-price project',
       sections: [
         {
           heading: 'Description',
-          body: '<p>Custom dashboards tracking competitors, market trends, and customer sentiment in real time. Interactive Plotly charts, deployed to a working URL.</p>'
+          body: '<p>Clean, transform, and structure data from PDFs, websites, spreadsheets, and APIs into analysis-ready formats. One-time or recurring data pipelines.</p>'
         },
         {
-          heading: 'What\'s Included',
-          body: '<ul><li>Data pipeline design and implementation</li><li>Custom dashboard with 5+ interactive views</li><li>KPI cards and trend visualization</li><li>Streamlit Cloud deployment</li><li>Data source integration</li></ul>'
+          heading: "What's Included",
+          body: '<ul><li>Custom data extraction scripts (Python)</li><li>Data cleaning, validation, and normalization</li><li>Structured output (CSV, JSON, Excel, or database)</li><li>Documentation and handover</li><li>Basic quality assurance report</li></ul>'
         },
         {
-          heading: 'Technical Details',
-          body: '<ul><li><strong>Stack:</strong> Python, pandas, Plotly, Streamlit</li><li><strong>Visualization:</strong> Interactive Plotly charts, KPI cards</li><li><strong>Timeline:</strong> 3–6 weeks depending on data sources</li></ul>'
+          heading: 'Timeline',
+          body: '<p>3–10 days depending on data complexity and volume.</p>'
         }
       ]
     },
     {
-      title: 'Procurement AI Solutions',
-      price: '$1,000',
+      title: 'AI Workflow Automation Setup',
+      price: '$75–$200',
+      type: 'Fixed-price project',
       sections: [
         {
           heading: 'Description',
-          body: '<p>RFP analysis, vendor scoring, and compliance checks powered by LLMs and structured data pipelines. From PDF to decision-ready report.</p>'
+          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting using LLMs and n8n/Make. From intake to structured output — no manual steps.</p>'
         },
         {
-          heading: 'What\'s Included',
-          body: '<ul><li>RFP document parsing and extraction</li><li>Vendor scoring and evaluation framework</li><li>Compliance check automation</li><li>Decision-ready report generation</li><li>Streamlit Cloud deployment</li></ul>'
+          heading: "What's Included",
+          body: '<ul><li>Custom pipeline design and development</li><li>LLM integration (GPT-4, Claude, or DeepSeek)</li><li>n8n/Make workflow configuration</li><li>Automated reporting and export</li><li>30-day support and maintenance</li></ul>'
         },
         {
-          heading: 'Technical Details',
-          body: '<ul><li><strong>Stack:</strong> Python, PyMuPDF, OpenAI API / DeepSeek, Pydantic, Streamlit</li><li><strong>Architecture:</strong> PDF Parser → LLM Analyzer → Validation → UI</li><li><strong>Timeline:</strong> 4–8 weeks depending on scope</li></ul>'
+          heading: 'Timeline',
+          body: '<p>2–4 weeks depending on complexity.</p>'
         }
       ]
     },
     {
-      title: 'Data Strategy & Consulting',
-      price: '$1,500',
+      title: 'AI Orchestrator Retainer',
+      price: '$2,000–$5,000/mo',
+      type: 'Monthly retainer',
       sections: [
         {
           heading: 'Description',
-          body: '<p>From research scoping to production-ready data systems — strategy, architecture, and implementation. Structured research-to-decision pipelines.</p>'
+          body: '<p>Ongoing AI strategy, custom tool development, workflow maintenance, and priority support for your business systems. A dedicated AI partner for your organization.</p>'
         },
         {
-          heading: 'What\'s Included',
-          body: '<ul><li>Research scoping and methodology design</li><li>Data architecture and pipeline design</li><li>Production-ready system implementation</li><li>Documentation and handover</li><li>30-day post-deployment support</li></ul>'
+          heading: "What's Included",
+          body: '<ul><li>Weekly strategy calls and roadmap updates</li><li>Custom AI tool development and deployment</li><li>Workflow maintenance and optimization</li><li>Priority support (48-hour response)</li><li>Monthly performance review and reporting</li></ul>'
         },
         {
-          heading: 'Technical Details',
-          body: '<ul><li><strong>Stack:</strong> Python, PostgreSQL, Streamlit, LLMs as needed</li><li><strong>Approach:</strong> Structured research-to-decision pipeline</li><li><strong>Timeline:</strong> 6–12 weeks depending on scope</li></ul>'
+          heading: 'Ideal For',
+          body: '<p>Businesses with ongoing AI, automation, or data intelligence needs who want a dedicated partner rather than one-off projects.</p>'
         }
       ]
     }
@@ -330,59 +334,139 @@ document.addEventListener('DOMContentLoaded', () => {
      =========================================== */
   const productsData = [
     {
-      title: 'AI Proposal Template Pack',
-      price: '$25',
+      title: 'AI Workflow Prompt Kit',
+      price: '$7',
       badge: 'Available on Gumroad',
       sections: [
         {
           heading: 'Description',
-          body: '<p>Ready-to-use proposal templates for AI consulting engagements. Includes scope definition, pricing frameworks, deliverable outlines, and client-ready formats.</p>'
+          body: '<p>50+ prompts for business automation — content generation, analysis, summarization, and decision support. Compatible with GPT-4, Claude, and DeepSeek.</p>'
         },
         {
           heading: 'Contents',
-          body: '<ul><li>5 proposal templates (PDF + DOCX)</li><li>Pricing calculator spreadsheet</li><li>Scope definition worksheet</li><li>Client onboarding checklist</li></ul>'
+          body: '<ul><li>50+ ready-to-use AI prompts across 10 categories</li><li>Prompt engineering best practices guide</li><li>Use-case mapping template</li><li>Prompt customization worksheet</li></ul>'
         },
         {
           heading: 'Format',
-          body: '<p>Digital download. PDF, DOCX, and XLSX formats. Compatible with Google Docs and Microsoft Office.</p>'
+          body: '<p>Digital download. PDF and Markdown formats.</p>'
         }
       ]
     },
     {
-      title: 'Market Analysis Workbook',
-      price: '$35',
-      badge: 'Available on Raket.ph',
-      sections: [
-        {
-          heading: 'Description',
-          body: '<p>Structured framework for Philippine market entry research. Step-by-step methodology covering market sizing, competitor analysis, and go-to-market strategy.</p>'
-        },
-        {
-          heading: 'Contents',
-          body: '<ul><li>Market sizing templates</li><li>Competitor analysis matrix</li><li>PESTEL analysis framework</li><li>Go-to-market strategy canvas</li></ul>'
-        },
-        {
-          heading: 'Format',
-          body: '<p>Digital download. PDF workbook with fillable fields plus XLSX templates.</p>'
-        }
-      ]
-    },
-    {
-      title: 'Automation Blueprint Bundle',
-      price: '$50',
+      title: 'No-Code Automation Templates (5-Pack)',
+      price: '$19',
       badge: 'Available on Gumroad',
       sections: [
         {
           heading: 'Description',
-          body: '<p>Technical blueprints for common business automation patterns. Includes architecture diagrams, code templates, and deployment guides for Python-based automation pipelines.</p>'
+          body: '<p>Ready-to-import n8n workflows for common business processes — lead capture, invoice processing, email triage, and more. Import and customize in minutes.</p>'
         },
         {
           heading: 'Contents',
-          body: '<ul><li>5 automation blueprint documents (PDF)</li><li>Python code templates (ZIP)</li><li>Architecture diagrams (PNG + draw.io)</li><li>Deployment guides (PDF)</li></ul>'
+          body: '<ul><li>5 ready-to-import n8n workflow JSON files</li><li>Setup guide and configuration checklist</li><li>Webhook integration templates</li><li>Error handling and notification setup</li></ul>'
         },
         {
-          heading: 'Format',
-          body: '<p>Digital download. PDF, PNG, draw.io, ZIP with Python templates.</p>'
+          heading: 'Requirements',
+          body: '<p>Requires a self-hosted or cloud n8n instance. Works with n8n v1.0+. Each workflow includes detailed setup instructions.</p>'
+        }
+      ]
+    },
+    {
+      title: 'Presentation Deck Templates',
+      price: '$9 / $19',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Professional slide decks for client pitches, investor updates, and boardroom presentations. $9 basic pack / $19 premium pack with animations and custom graphics.</p>'
+        },
+        {
+          heading: 'Contents (Basic — $9)',
+          body: '<ul><li>10 slide templates (Google Slides + PowerPoint)</li><li>Cover, agenda, content, data, and closing slides</li><li>Brand color guide included</li></ul>'
+        },
+        {
+          heading: 'Contents (Premium — $19)',
+          body: '<ul><li>All basic templates plus 15 additional slides</li><li>Animated transitions and custom graphics</li><li>Data visualization slide templates</li><li>Icon library and illustration assets</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'Portfolio Case Study System',
+      price: 'Free / $7',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Case study templates for consultants and agencies. Free (basic) / $7 (pro with frameworks and design assets).</p>'
+        },
+        {
+          heading: 'Contents (Free)',
+          body: '<ul><li>Basic case study template (PDF)</li><li>Structure guide with examples</li></ul>'
+        },
+        {
+          heading: 'Contents (Pro — $7)',
+          body: '<ul><li>All free content plus 5 case study frameworks</li><li>Design assets for social media promotion</li><li>Client testimonial collection templates</li><li>Metrics dashboard template</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'Research Report System',
+      price: '$9 / $19 / $24',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Research frameworks and report templates. $9 (basic) / $19 (pro) / $24 (enterprise with data pipelines). Ideal for market researchers and consultants.</p>'
+        },
+        {
+          heading: 'Contents (Basic — $9)',
+          body: '<ul><li>Research framework templates (PDF)</li><li>Report structure guides</li><li>Data collection worksheets</li></ul>'
+        },
+        {
+          heading: 'Contents (Pro — $19)',
+          body: '<ul><li>All basic content plus 5 advanced frameworks</li><li>Data analysis templates (Excel + Python)</li><li>Visualization templates</li><li>Presentation slide deck</li></ul>'
+        },
+        {
+          heading: 'Contents (Enterprise — $24)',
+          body: '<ul><li>All pro content plus data pipeline scripts (Python)</li><li>Automated report generation setup</li><li>API integration templates</li><li>Priority email support</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'AI Chatbot Blueprint',
+      price: '$9 / $14',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Build custom chatbots for customer support, lead qualification, and internal knowledge bases. $9 (basic) / $14 (pro with advanced features).</p>'
+        },
+        {
+          heading: 'Contents (Basic — $9)',
+          body: '<ul><li>Chatbot architecture blueprint (PDF)</li><li>Prompt templates for 5 use cases</li><li>Integration guide (Telegram, Slack, Web)</li></ul>'
+        },
+        {
+          heading: 'Contents (Pro — $14)',
+          body: '<ul><li>All basic content plus Python implementation scripts</li><li>Memory and context management setup</li><li>Analytics and logging framework</li><li>Deployment guide for Streamlit Cloud</li></ul>'
+        }
+      ]
+    },
+    {
+      title: 'Workflow Audit Checklist',
+      price: 'Free / $5',
+      badge: 'Available on Gumroad',
+      sections: [
+        {
+          heading: 'Description',
+          body: '<p>Business process audit toolkit. Free (basic checklist) / $5 (full audit workbook with scoring and recommendations).</p>'
+        },
+        {
+          heading: 'Contents (Free)',
+          body: '<ul><li>Basic workflow assessment checklist (PDF)</li><li>Process mapping guide</li></ul>'
+        },
+        {
+          heading: 'Contents (Pro — $5)',
+          body: '<ul><li>All free content plus full audit workbook (Excel)</li><li>Scoring framework with weighted criteria</li><li>Recommendation engine template</li><li>Priority matrix and action plan template</li><li>Automation opportunity calculator</li></ul>'
         }
       ]
     }
@@ -399,7 +483,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tabContents: document.querySelectorAll('.tab-content'),
     filterTabs: document.querySelectorAll('.filter-tab'),
     projectCards: document.querySelectorAll('.project-card'),
-    heroCtaSamples: document.querySelector('.hero-cta-samples'),
     modalOverlay: document.getElementById('modal-overlay'),
     modalContent: document.getElementById('modal-content'),
     modalClose: document.getElementById('modal-close'),
@@ -417,9 +500,12 @@ document.addEventListener('DOMContentLoaded', () => {
      Tab Navigation
      =========================================== */
   function switchTab(tabId) {
-    els.navLinks.querySelectorAll('a').forEach((link) => {
+    els.navLinks.querySelectorAll('[data-tab]').forEach((link) => {
       const isActive = link.dataset.tab === tabId;
       link.classList.toggle('active', isActive);
+      if (link.getAttribute('role') === 'tab') {
+        link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      }
     });
 
     els.tabContents.forEach((el) => {
@@ -432,19 +518,25 @@ document.addEventListener('DOMContentLoaded', () => {
     els.navLinks.classList.remove('open');
   }
 
+  /* Handle clicks on data-tab elements in nav */
   els.navLinks.addEventListener('click', (e) => {
-    const link = e.target.closest('a[data-tab]');
-    if (!link) return;
-    e.preventDefault();
-    switchTab(link.dataset.tab);
+    const trigger = e.target.closest('[data-tab]');
+    if (!trigger) return;
+    const tabId = trigger.dataset.tab;
+    if (tabId) {
+      switchTab(tabId);
+    }
   });
 
-  /* Handle clicks on non-nav-link elements with data-tab (hero buttons, etc.) */
+  /* Handle clicks on data-tab elements outside nav (hero buttons, etc.) */
   document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('[data-tab]:not(.nav-link)');
+    const trigger = e.target.closest('[data-tab]');
     if (!trigger) return;
-    e.preventDefault();
-    switchTab(trigger.dataset.tab);
+    if (els.navLinks.contains(trigger)) return; // handled above
+    const tabId = trigger.dataset.tab;
+    if (tabId) {
+      switchTab(tabId);
+    }
   });
 
   /* ===========================================
@@ -455,24 +547,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ===========================================
-     Hero CTA -> Samples Tab
-     =========================================== */
-  if (els.heroCtaSamples) {
-    els.heroCtaSamples.addEventListener('click', (e) => {
-      e.preventDefault();
-      switchTab('samples');
-    });
-  }
-
-  /* ===========================================
      Project/Sample Category Filtering
      =========================================== */
   els.filterTabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       const filter = tab.dataset.filter;
 
-      els.filterTabs.forEach((t) => t.classList.remove('active'));
+      els.filterTabs.forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
       state.activeFilter = filter;
 
       els.projectCards.forEach((card) => {
@@ -509,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show GitHub button for sample projects
     if (type === 'sample' && data.githubUrl) {
       html += `<div class="modal-footer">
-        <a href="${data.githubUrl}" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+        <button class="btn btn-primary" onclick="window.open('${data.githubUrl}','_blank')">View on GitHub →</button>
       </div>`;
     }
 
@@ -517,6 +603,9 @@ document.addEventListener('DOMContentLoaded', () => {
     els.modalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
+
+  /* Expose openModal globally for potential onclick usage */
+  window.openModal = openModal;
 
   /* ===========================================
      Modal: Close
@@ -530,24 +619,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     const card = e.target.closest('[data-card-type]');
     if (!card) return;
-    if (e.target.closest('a, button')) return;
+    if (e.target.closest('button, .contact-action')) return;
 
     const type = card.dataset.cardType;
     const index = parseInt(card.dataset.cardIndex, 10);
     if (type && !isNaN(index)) {
       openModal(type, index);
     }
-  });
-
-  /* Also handle project cards with data-project-index (legacy) */
-  els.projectCards.forEach((card) => {
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('a, button, [data-card-type]')) return;
-      const index = parseInt(card.dataset.projectIndex, 10);
-      if (!isNaN(index)) {
-        openModal('sample', index);
-      }
-    });
   });
 
   els.modalClose.addEventListener('click', closeModal);
@@ -561,6 +639,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && els.modalOverlay.classList.contains('open')) {
       closeModal();
+    }
+  });
+
+  /* ===========================================
+     Keyboard: Enter/Space on interactive elements
+     =========================================== */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      const target = e.target.closest('[data-card-type], [data-tab], .nav-link');
+      if (target && !e.target.closest('button, textarea, input')) {
+        e.preventDefault();
+        target.click();
+      }
     }
   });
 
