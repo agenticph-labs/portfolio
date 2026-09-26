@@ -220,14 +220,14 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
 }
 
 .hero-brand {
-  font-size: 4.5rem; font-weight: 800; color: #0F172A;
+  font-size: clamp(5rem, 12vw, 11rem); font-weight: 800; color: #0F172A;
   margin-bottom: 1rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
 }
 
 .hero-tagline {
-  font-size: 1.6rem; color: #475569;
+  font-size: clamp(1.5rem, 4vw, 3.5rem); color: #475569;
   margin-bottom: 2rem;
   line-height: 1.5;
 }
@@ -240,9 +240,9 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
 
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
+  padding: 1rem 2.25rem;
   border-radius: 8px;
-  font-weight: 600; font-size: 0.95rem;
+  font-weight: 600; font-size: 1.15rem;
   transition: all 500ms;
   cursor: pointer;
   border: none;
@@ -305,7 +305,6 @@ body.dark .btn-secondary:hover { background: rgba(212, 160, 23, 0.1); }
   font-size: 2.2rem;
   color: #0D7377;
   line-height: 1;
-  animation: bob 2s ease-in-out infinite;
   transition: color 400ms;
 }
 
@@ -316,11 +315,6 @@ body.dark .scroll-label { color: #D4A017; }
 body.dark .scroll-arrow { color: #D4A017; }
 body.dark .scroll-link:hover .scroll-label,
 body.dark .scroll-link:hover .scroll-arrow { color: #FBBF24; }
-
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
 
 /* ---------- About ---------- */
 /* ---------- About Text ---------- */
@@ -1009,15 +1003,15 @@ body.dark .footer-sep { color: #475569; }
     text-align: left;
   }
 
-  .hero-brand { font-size: 2.8rem; }
-  .hero-tagline { font-size: 1.2rem; }
+  .hero-brand { font-size: clamp(3.5rem, 10vw, 4.5rem); }
+  .hero-tagline { font-size: clamp(1.3rem, 4vw, 2rem); }
 
   .section-page { padding: 2rem 1.25rem 3rem; }
   .section-title { font-size: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-  .hero-brand { font-size: 2rem; }
+  .hero-brand { font-size: clamp(2.5rem, 14vw, 5rem); }
   .projects-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .products-grid { grid-template-columns: 1fr; }
