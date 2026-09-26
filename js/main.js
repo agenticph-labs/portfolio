@@ -253,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = [
     {
       title: 'Product Research &amp; Market Analysis',
-      type: 'Fixed-price project',
       sections: [
         {
           heading: 'Description',
@@ -271,7 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Data Extraction &amp; Processing',
-      type: 'Fixed-price project',
       sections: [
         {
           heading: 'Description',
@@ -289,7 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Workflow Automation Setup',
-      type: 'Fixed-price project',
       sections: [
         {
           heading: 'Description',
@@ -307,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Orchestrator Retainer',
-      type: 'Monthly retainer',
       sections: [
         {
           heading: 'Description',
@@ -374,11 +370,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Professional slide decks for client pitches, investor updates, and boardroom presentations.</p>'
         },
         {
-          heading: 'Contents (Basic)',
+          heading: 'Contents',
           body: '<ul><li>10 slide templates (Google Slides + PowerPoint)</li><li>Cover, agenda, content, data, and closing slides</li><li>Brand color guide included</li></ul>'
         },
         {
-          heading: 'Contents (Premium)',
+          heading: 'Contents',
           body: '<ul><li>All basic templates plus 15 additional slides</li><li>Animated transitions and custom graphics</li><li>Data visualization slide templates</li><li>Icon library and illustration assets</li></ul>'
         }
       ]
@@ -392,11 +388,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Case study templates for consultants and agencies.</p>'
         },
         {
-          heading: 'Contents (Free)',
+          heading: 'Contents',
           body: '<ul><li>Basic case study template (PDF)</li><li>Structure guide with examples</li></ul>'
         },
         {
-          heading: 'Contents (Pro)',
+          heading: 'Contents',
           body: '<ul><li>All free content plus 5 case study frameworks</li><li>Design assets for social media promotion</li><li>Client testimonial collection templates</li><li>Metrics dashboard template</li></ul>'
         }
       ]
@@ -410,15 +406,15 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Research frameworks and report templates.</p>'
         },
         {
-          heading: 'Contents (Basic)',
+          heading: 'Contents',
           body: '<ul><li>Research framework templates (PDF)</li><li>Report structure guides</li><li>Data collection worksheets</li></ul>'
         },
         {
-          heading: 'Contents (Pro)',
+          heading: 'Contents',
           body: '<ul><li>All basic content plus 5 advanced frameworks</li><li>Data analysis templates (Excel + Python)</li><li>Visualization templates</li><li>Presentation slide deck</li></ul>'
         },
         {
-          heading: 'Contents (Enterprise)',
+          heading: 'Contents',
           body: '<ul><li>All pro content plus data pipeline scripts (Python)</li><li>Automated report generation setup</li><li>API integration templates</li><li>Priority email support</li></ul>'
         }
       ]
@@ -432,11 +428,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Build custom chatbots for customer support, lead qualification, and internal knowledge bases.</p>'
         },
         {
-          heading: 'Contents (Basic)',
+          heading: 'Contents',
           body: '<ul><li>Chatbot architecture blueprint (PDF)</li><li>Prompt templates for 5 use cases</li><li>Integration guide (Telegram, Slack, Web)</li></ul>'
         },
         {
-          heading: 'Contents (Pro)',
+          heading: 'Contents',
           body: '<ul><li>All basic content plus Python implementation scripts</li><li>Memory and context management setup</li><li>Analytics and logging framework</li><li>Deployment guide for Streamlit Cloud</li></ul>'
         }
       ]
@@ -450,11 +446,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Business process audit toolkit.</p>'
         },
         {
-          heading: 'Contents (Free)',
+          heading: 'Contents',
           body: '<ul><li>Basic workflow assessment checklist (PDF)</li><li>Process mapping guide</li></ul>'
         },
         {
-          heading: 'Contents (Pro)',
+          heading: 'Contents',
           body: '<ul><li>All free content plus full audit workbook (Excel)</li><li>Scoring framework with weighted criteria</li><li>Recommendation engine template</li><li>Priority matrix and action plan template</li><li>Automation opportunity calculator</li></ul>'
         }
       ]
