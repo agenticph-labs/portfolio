@@ -1,5 +1,5 @@
 /* ============================================================
-   Agentic PH — Portfolio CSS v2d
+   AgenticPH · Portfolio CSS v2d
    Brand: Deep Teal #0D7377 | Warm Gold #D4A017 | Slate #475569
    ============================================================ */
 
@@ -31,8 +31,7 @@ body.dark .nav-links .nav-link:hover,
 body.dark .nav-link.active { color: #D4A017; }
 body.dark .nav-brand { color: #D4A017; }
 
-body.dark .hero-badge { background: rgba(212, 160, 23, 0.12); color: #D4A017; border-color: rgba(212, 160, 23, 0.25); }
-body.dark .hero h1 { color: #F1F5F9; }
+body.dark .hero-brand { color: #F1F5F9; }
 body.dark .hero-tagline { color: #94A3B8; }
 
 body.dark .section-title { color: #D4A017; }
@@ -68,16 +67,13 @@ body.dark .contact-card p { color: #94A3B8; }
 body.dark .contact-action { color: #D4A017; }
 body.dark .contact-action:hover { color: #FBBF24; }
 
-body.dark .about-lead { color: #E2E8F0; }
-body.dark .about-main p { color: #CBD5E1; }
+body.dark .about-text p { color: #CBD5E1; }
 body.dark .stack-heading { color: #D4A017; }
 body.dark .stack-item { background: rgba(212, 160, 23, 0.04); border-color: rgba(212, 160, 23, 0.1); }
 body.dark .stack-item strong { color: #D4A017; }
 body.dark .stack-item span { color: #94A3B8; }
 body.dark .role-credits { color: #94A3B8; }
 body.dark .role-sep { color: #D4A017; }
-
-body.dark .about-placeholder { background: rgba(212, 160, 23, 0.06); border-color: rgba(212, 160, 23, 0.15); color: #D4A017; }
 
 body.dark .footer { background-color: #060b14; border-top-color: #1E293B; }
 body.dark .footer-tagline { color: #64748B; }
@@ -230,25 +226,12 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
   max-width: 720px;
 }
 
-.hero-badge {
-  display: inline-block;
-  font-size: 0.85rem; font-weight: 600; letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #0D7377; background: rgba(13, 115, 119, 0.08);
-  padding: 0.4rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid rgba(13, 115, 119, 0.15);
-  margin-bottom: 1.5rem;
-}
-
-.hero h1 {
+.hero-brand {
   font-size: 3.2rem; font-weight: 800; color: #0F172A;
   margin-bottom: 1rem;
   line-height: 1.2;
   letter-spacing: -0.03em;
 }
-
-.accent-gold { color: #D4A017; }
 
 .hero-tagline {
   font-size: 1.25rem; color: #475569;
@@ -292,48 +275,23 @@ body.dark .btn-secondary { color: #D4A017; border-color: #D4A017; }
 body.dark .btn-secondary:hover { background: rgba(212, 160, 23, 0.1); }
 
 /* ---------- About ---------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 3rem;
-  align-items: start;
+/* ---------- About Text ---------- */
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.about-lead {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #0F172A;
+.about-text p {
   margin-bottom: 1.25rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 
-.about-main p {
+.about-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  max-width: 620px;
-}
-
-.about-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 6rem;
-}
-
-.about-placeholder {
-  width: 220px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed #CBD5E1;
-  border-radius: 16px;
-  background: rgba(13, 115, 119, 0.03);
-  color: #94A3B8;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 1rem;
 }
 
 /* ---------- Stack Section (About) ---------- */
@@ -777,6 +735,31 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
 
 .contact-action:hover { color: #D4A017; }
 
+/* ---------- Contact single-row ---------- */
+.contact-grid.single-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-grid.single-row .contact-card {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---------- About tab visual separation ---------- */
+#about-hero {
+  min-height: auto;
+  padding-bottom: 1rem;
+}
+
+#about-body {
+  padding-top: 0.5rem;
+}
+
 /* ---------- Modal Overlay ---------- */
 .modal-overlay {
   display: none;
@@ -1012,32 +995,29 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
     text-align: left;
   }
 
-  .hero h1 { font-size: 2rem; }
+  .hero-brand { font-size: 2rem; }
   .hero-tagline { font-size: 1.1rem; }
-  .hero-badge { font-size: 0.75rem; }
 
   .section-page { padding: 2rem 1.25rem 3rem; }
   .section-title { font-size: 1.5rem; }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .footer-credits {
+    justify-content: center;
   }
+}
 
-  .about-visual {
-    order: -1;
-    position: static;
-  }
-
-  .about-placeholder {
-    width: 180px;
-    height: 180px;
-  }
-
+@media (max-width: 480px) {
+  .hero-brand { font-size: 1.6rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .products-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid.single-row {
+    flex-direction: column;
+  }
+  .btn { padding: 0.6rem 1.25rem; font-size: 0.85rem; }
+  .filter-bar { gap: 0.3rem; }
+  .filter-btn { font-size: 0.8rem; padding: 0.4rem 0.9rem; }
 
   .modal-box {
     padding: 1.5rem 1.25rem 1.25rem;
@@ -1070,9 +1050,3 @@ body.dark .tag-data { background: rgba(20, 184, 166, 0.15); color: #14B8A6; }
   }
 }
 
-@media (max-width: 480px) {
-  .hero h1 { font-size: 1.6rem; }
-  .btn { padding: 0.6rem 1.25rem; font-size: 0.85rem; }
-  .filter-bar { gap: 0.3rem; }
-  .filter-btn { font-size: 0.8rem; padding: 0.4rem 0.9rem; }
-}

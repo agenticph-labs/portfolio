@@ -1,5 +1,5 @@
 /**
- * Agentic PH — Portfolio JS v2d
+ * Agentic PH · Portfolio JS v2d
  * Tab navigation, project/service/product filtering with modal popups, theme toggle
  * No external dependencies.
  */
@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'automation-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
-      githubUrl: 'https://github.com/agenticph-labs/p1-client-intake',
+      githubUrl: 'https://github.com/agenticph/p1-client-intake',
       sections: [
         {
           heading: 'Problem',
-          body: '<p>Consulting firms waste hours manually processing client inquiry forms — reading emails, extracting requirements, classifying needs, and producing project scopes. Every client uses different language; no two intake forms look alike.</p>'
+          body: '<p>Consulting firms waste hours manually processing client inquiry forms · reading emails, extracting requirements, classifying needs, and producing project scopes. Every client uses different language; no two intake forms look alike.</p>'
         },
         {
           heading: 'Objective',
-          body: '<p>Build an automated pipeline that ingests client data in any format (JSON, CSV), validates it, classifies the need using a rule engine, and generates a structured project scope document — all in a single, auditable pass.</p>'
+          body: '<p>Build an automated pipeline that ingests client data in any format (JSON, CSV), validates it, classifies the need using a rule engine, and generates a structured project scope document · all in a single, auditable pass.</p>'
         },
         {
           heading: 'Approach',
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           heading: 'Technical Details',
-          body: '<ul><li><strong>Stack:</strong> Python 3.10+ (stdlib only — zero dependencies)</li><li><strong>Classification:</strong> Keyword-based rule engine with confidence scoring (0–1)</li><li><strong>Testing:</strong> pytest suite covering validation, classification, and output stages</li></ul>'
+          body: '<ul><li><strong>Stack:</strong> Python 3.10+ (stdlib only · zero dependencies)</li><li><strong>Classification:</strong> Keyword-based rule engine with confidence scoring (0–1)</li><li><strong>Testing:</strong> pytest suite covering validation, classification, and output stages</li></ul>'
         },
         {
           heading: 'Limitations',
-          body: '<ul><li>Current keyword rules are static — future versions should support YAML-configured rule sets</li><li>No LLM fallback for ambiguous classifications (intentional — keeps pipeline deterministic)</li><li>Could support PDF intake documents via OCR pre-processing stage</li></ul>'
+          body: '<ul><li>Current keyword rules are static · future versions should support YAML-configured rule sets</li><li>No LLM fallback for ambiguous classifications (intentional · keeps pipeline deterministic)</li><li>Could support PDF intake documents via OCR pre-processing stage</li></ul>'
         }
       ]
     },
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'data-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
-      githubUrl: 'https://github.com/agenticph-labs/p2-ph-market-intelligence',
+      githubUrl: 'https://github.com/agenticph/p2-ph-market-intelligence',
       sections: [
         {
           heading: 'Problem',
@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           heading: 'Objective',
-          body: '<p>Build an interactive Streamlit dashboard consolidating Philippine coffee shop market data — market overview, competitor analysis, geographic distribution, pricing, and business insights — accessible in 10 minutes, not 10 hours.</p>'
+          body: '<p>Build an interactive Streamlit dashboard consolidating Philippine coffee shop market data · market overview, competitor analysis, geographic distribution, pricing, and business insights · accessible in 10 minutes, not 10 hours.</p>'
         },
         {
           heading: 'Approach',
-          body: '<p>Dashboard over static report — market intelligence is inherently exploratory. Separated data pipeline (clean → transform → analyze → export) from the dashboard layer for independent testability and reuse.</p>'
+          body: '<p>Dashboard over static report · market intelligence is inherently exploratory. Separated data pipeline (clean → transform → analyze → export) from the dashboard layer for independent testability and reuse.</p>'
         },
         {
           heading: 'Implementation',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           heading: 'Limitations',
-          body: '<ul><li>Data is manually collected — automated news/data ingestion pipeline needed</li><li>No real-time pricing data; menu prices are point-in-time snapshots</li><li>Geographic data is aggregated at regional level</li></ul>'
+          body: '<ul><li>Data is manually collected · automated news/data ingestion pipeline needed</li><li>No real-time pricing data; menu prices are point-in-time snapshots</li><li>Geographic data is aggregated at regional level</li></ul>'
         }
       ]
     },
@@ -96,19 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'ai-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph-labs/p3-rfp-analyzer',
+      githubUrl: 'https://github.com/agenticph/p3-rfp-analyzer',
       sections: [
         {
           heading: 'Problem',
-          body: '<p>Procurement teams spend hours reading PDF-based RFPs and RFQs — extracting deadlines, eligibility criteria, deliverables, evaluation criteria, and risks. A missed detail can disqualify a bid worth millions.</p>'
+          body: '<p>Procurement teams spend hours reading PDF-based RFPs and RFQs · extracting deadlines, eligibility criteria, deliverables, evaluation criteria, and risks. A missed detail can disqualify a bid worth millions.</p>'
         },
         {
           heading: 'Objective',
-          body: '<p>Build an AI-powered system that extracts structured information from procurement PDFs — deadlines, eligibility, deliverables, evaluation criteria, budget, risks — validated against a defined schema so no critical field is silently dropped.</p>'
+          body: '<p>Build an AI-powered system that extracts structured information from procurement PDFs · deadlines, eligibility, deliverables, evaluation criteria, budget, risks · validated against a defined schema so no critical field is silently dropped.</p>'
         },
         {
           heading: 'Approach',
-          body: '<p>LLM-in-the-loop architecture over pure regex — procurement documents vary wildly. Three independently testable layers: PDF parsing → LLM extraction → Pydantic validation. Pydantic ensures schema compliance; missing fields are gracefully omitted.</p>'
+          body: '<p>LLM-in-the-loop architecture over pure regex · procurement documents vary wildly. Three independently testable layers: PDF parsing → LLM extraction → Pydantic validation. Pydantic ensures schema compliance; missing fields are gracefully omitted.</p>'
         },
         {
           heading: 'Implementation',
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'ai-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph-labs/p4-customer-feedback-intel',
+      githubUrl: 'https://github.com/agenticph/p4-customer-feedback-intel',
       sections: [
         {
           heading: 'Problem',
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           heading: 'Limitations',
-          body: '<ul><li>VADER is English-only — Taglish reviews need a multilingual sentiment model</li><li>Topic count (k=5) is fixed — dynamic selection would improve with growth</li><li>No automatic data ingestion — real-time monitoring not yet supported</li></ul>'
+          body: '<ul><li>VADER is English-only · Taglish reviews need a multilingual sentiment model</li><li>Topic count (k=5) is fixed · dynamic selection would improve with growth</li><li>No automatic data ingestion · real-time monitoring not yet supported</li></ul>'
         }
       ]
     },
@@ -174,11 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'automation-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph-labs/p5-competitive-intel',
+      githubUrl: 'https://github.com/agenticph/p5-competitive-intel',
       sections: [
         {
           heading: 'Problem',
-          body: '<p>Philippine businesses operate in a fast-moving competitive landscape where tracking competitors manually — news, hiring, features, pricing — is impractical. Most SME decision-makers rely on anecdotal intel.</p>'
+          body: '<p>Philippine businesses operate in a fast-moving competitive landscape where tracking competitors manually · news, hiring, features, pricing · is impractical. Most SME decision-makers rely on anecdotal intel.</p>'
         },
         {
           heading: 'Objective',
@@ -198,11 +198,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           heading: 'Technical Details',
-          body: '<ul><li><strong>Stack:</strong> Python 3.13+ (stdlib only — zero external deps)</li><li><strong>Architecture:</strong> Collect → Analyze → Synthesize → Report; modular, independently testable stages</li><li><strong>Scoring:</strong> Weighted 5-factor competitive score with configurable weights</li></ul>'
+          body: '<ul><li><strong>Stack:</strong> Python 3.13+ (stdlib only · zero external deps)</li><li><strong>Architecture:</strong> Collect → Analyze → Synthesize → Report; modular, independently testable stages</li><li><strong>Scoring:</strong> Weighted 5-factor competitive score with configurable weights</li></ul>'
         },
         {
           heading: 'Limitations',
-          body: '<ul><li>Data sources are simulated — real NewsAPI, LinkedIn integration is next step</li><li>No persistent storage; each run starts fresh (intentional for daily batch)</li><li>Alert system (Slack/email notifications) not yet implemented</li></ul>'
+          body: '<ul><li>Data sources are simulated · real NewsAPI, LinkedIn integration is next step</li><li>No persistent storage; each run starts fresh (intentional for daily batch)</li><li>Alert system (Slack/email notifications) not yet implemented</li></ul>'
         }
       ]
     },
@@ -213,11 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'research-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph-labs/p6-research-decision',
+      githubUrl: 'https://github.com/agenticph/p6-research-decision',
       sections: [
         {
           heading: 'Problem',
-          body: '<p>A mid-cap F&amp;B group considering Philippine market entry needs a defensible, data-driven answer. Traditional consulting takes 8–12 weeks and costs PHP 1–3M — out of reach for smaller firms.</p>'
+          body: '<p>A mid-cap F&amp;B group considering Philippine market entry needs a defensible, data-driven answer. Traditional consulting takes 8–12 weeks and costs PHP 1–3M · out of reach for smaller firms.</p>'
         },
         {
           heading: 'Objective',
@@ -229,11 +229,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           heading: 'Implementation',
-          body: '<p>Jupyter notebook walks through all 8 stages interactively. Data from PSA, BSP, Euromonitor, Kantar. Top-down + bottom-up market sizing. Porter\'s Five Forces + Strategic Group Mapping. MCDA scores 7 dimensions with transparent weights — producing a 74.7/100 Conditional GO.</p>'
+          body: '<p>Jupyter notebook walks through all 8 stages interactively. Data from PSA, BSP, Euromonitor, Kantar. Top-down + bottom-up market sizing. Porter\'s Five Forces + Strategic Group Mapping. MCDA scores 7 dimensions with transparent weights · producing a 74.7/100 Conditional GO.</p>'
         },
         {
           heading: 'Result',
-          body: '<p>Composite score 74.7/100 — Conditional GO. Recommendation: Enter via phased strategy — 3 pilot stores in Metro Manila CBDs, validate unit economics over 12 months, then scale regionally.</p>'
+          body: '<p>Composite score 74.7/100 · Conditional GO. Recommendation: Enter via phased strategy · 3 pilot stores in Metro Manila CBDs, validate unit economics over 12 months, then scale regionally.</p>'
         },
         {
           heading: 'Technical Details',
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sections: [
         {
           heading: 'Description',
-          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting using LLMs and n8n/Make. From intake to structured output — no manual steps.</p>'
+          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting using LLMs and n8n/Make. From intake to structured output · no manual steps.</p>'
         },
         {
           heading: "What's Included",
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sections: [
         {
           heading: 'Description',
-          body: '<p>50+ prompts for business automation — content generation, analysis, summarization, and decision support. Compatible with GPT-4, Claude, and DeepSeek.</p>'
+          body: '<p>50+ prompts for business automation · content generation, analysis, summarization, and decision support. Compatible with GPT-4, Claude, and DeepSeek.</p>'
         },
         {
           heading: 'Contents',
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sections: [
         {
           heading: 'Description',
-          body: '<p>Ready-to-import n8n workflows for common business processes — lead capture, invoice processing, email triage, and more. Import and customize in minutes.</p>'
+          body: '<p>Ready-to-import n8n workflows for common business processes · lead capture, invoice processing, email triage, and more. Import and customize in minutes.</p>'
         },
         {
           heading: 'Contents',
@@ -381,11 +381,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Professional slide decks for client pitches, investor updates, and boardroom presentations. $9 basic pack / $19 premium pack with animations and custom graphics.</p>'
         },
         {
-          heading: 'Contents (Basic — $9)',
+          heading: 'Contents (Basic · $9)',
           body: '<ul><li>10 slide templates (Google Slides + PowerPoint)</li><li>Cover, agenda, content, data, and closing slides</li><li>Brand color guide included</li></ul>'
         },
         {
-          heading: 'Contents (Premium — $19)',
+          heading: 'Contents (Premium · $19)',
           body: '<ul><li>All basic templates plus 15 additional slides</li><li>Animated transitions and custom graphics</li><li>Data visualization slide templates</li><li>Icon library and illustration assets</li></ul>'
         }
       ]
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<ul><li>Basic case study template (PDF)</li><li>Structure guide with examples</li></ul>'
         },
         {
-          heading: 'Contents (Pro — $7)',
+          heading: 'Contents (Pro · $7)',
           body: '<ul><li>All free content plus 5 case study frameworks</li><li>Design assets for social media promotion</li><li>Client testimonial collection templates</li><li>Metrics dashboard template</li></ul>'
         }
       ]
@@ -419,15 +419,15 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Research frameworks and report templates. $9 (basic) / $19 (pro) / $24 (enterprise with data pipelines). Ideal for market researchers and consultants.</p>'
         },
         {
-          heading: 'Contents (Basic — $9)',
+          heading: 'Contents (Basic · $9)',
           body: '<ul><li>Research framework templates (PDF)</li><li>Report structure guides</li><li>Data collection worksheets</li></ul>'
         },
         {
-          heading: 'Contents (Pro — $19)',
+          heading: 'Contents (Pro · $19)',
           body: '<ul><li>All basic content plus 5 advanced frameworks</li><li>Data analysis templates (Excel + Python)</li><li>Visualization templates</li><li>Presentation slide deck</li></ul>'
         },
         {
-          heading: 'Contents (Enterprise — $24)',
+          heading: 'Contents (Enterprise · $24)',
           body: '<ul><li>All pro content plus data pipeline scripts (Python)</li><li>Automated report generation setup</li><li>API integration templates</li><li>Priority email support</li></ul>'
         }
       ]
@@ -442,11 +442,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<p>Build custom chatbots for customer support, lead qualification, and internal knowledge bases. $9 (basic) / $14 (pro with advanced features).</p>'
         },
         {
-          heading: 'Contents (Basic — $9)',
+          heading: 'Contents (Basic · $9)',
           body: '<ul><li>Chatbot architecture blueprint (PDF)</li><li>Prompt templates for 5 use cases</li><li>Integration guide (Telegram, Slack, Web)</li></ul>'
         },
         {
-          heading: 'Contents (Pro — $14)',
+          heading: 'Contents (Pro · $14)',
           body: '<ul><li>All basic content plus Python implementation scripts</li><li>Memory and context management setup</li><li>Analytics and logging framework</li><li>Deployment guide for Streamlit Cloud</li></ul>'
         }
       ]
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
           body: '<ul><li>Basic workflow assessment checklist (PDF)</li><li>Process mapping guide</li></ul>'
         },
         {
-          heading: 'Contents (Pro — $5)',
+          heading: 'Contents (Pro · $5)',
           body: '<ul><li>All free content plus full audit workbook (Excel)</li><li>Scoring framework with weighted criteria</li><li>Recommendation engine template</li><li>Priority matrix and action plan template</li><li>Automation opportunity calculator</li></ul>'
         }
       ]
