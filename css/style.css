@@ -220,14 +220,14 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
 }
 
 .hero-brand {
-  font-size: clamp(5rem, 14vw, 15rem); font-weight: 800; color: #0F172A;
+  font-size: clamp(4rem, 10vw, 8rem); font-weight: 800; color: #0F172A;
   margin-bottom: 1rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
 }
 
 .hero-tagline {
-  font-size: clamp(2.5rem, 6vw, 4.5rem); color: #475569;
+  font-size: clamp(1.8rem, 4vw, 2.8rem); color: #475569;
   margin-bottom: 2rem;
   line-height: 1.5;
 }
@@ -238,7 +238,7 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
   margin-bottom: 1rem;
 }
 .hero-actions .btn {
-  font-size: clamp(1.4rem, 2.5vw, 2rem); padding: 1rem 3rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem); padding: 1rem 3rem;
 }
 
 .btn {
