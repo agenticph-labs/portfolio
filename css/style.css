@@ -306,6 +306,16 @@ body.dark .btn-secondary:hover { background: rgba(212, 160, 23, 0.1); }
 }
 body.dark .scroll-label { color: #D4A017; }
 body.dark .scroll-arrow { color: #D4A017; }
+body.dark .chevron-arrow { border-color: #D4A017; }
+
+.chevron-arrow {
+  width: 20px;
+  height: 12px;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  display: inline-block;
+}
 
 /* ---------- About ---------- */
 /* ---------- About Text ---------- */
