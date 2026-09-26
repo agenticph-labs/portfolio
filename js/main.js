@@ -253,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = [
     {
       title: 'Product Research &amp; Market Analysis',
-      price: '$35–$65',
       type: 'Fixed-price project',
       sections: [
         {
@@ -272,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Data Extraction &amp; Processing',
-      price: '$35–$80',
       type: 'Fixed-price project',
       sections: [
         {
@@ -291,7 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Workflow Automation Setup',
-      price: '$75–$200',
       type: 'Fixed-price project',
       sections: [
         {
@@ -310,7 +307,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Orchestrator Retainer',
-      price: '$2,000–$5,000/mo',
       type: 'Monthly retainer',
       sections: [
         {
@@ -335,7 +331,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const productsData = [
     {
       title: 'AI Workflow Prompt Kit',
-      price: '$7',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -354,7 +349,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'No-Code Automation Templates (5-Pack)',
-      price: '$19',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -373,7 +367,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Presentation Deck Templates',
-      price: '$9 / $19',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -392,7 +385,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Portfolio Case Study System',
-      price: 'Free / $7',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -411,7 +403,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Research Report System',
-      price: '$9 / $19 / $24',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -434,7 +425,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Chatbot Blueprint',
-      price: '$9 / $14',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -453,7 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Workflow Audit Checklist',
-      price: 'Free / $5',
       badge: 'Available on Gumroad',
       sections: [
         {
@@ -581,9 +570,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let html = `<h3>${data.title}</h3>`;
 
-    if (data.price) {
-      html += `<div class="modal-price">${data.price}</div>`;
-    }
     if (data.badge) {
       html += `<span class="modal-badge">${data.badge}</span>`;
     }
