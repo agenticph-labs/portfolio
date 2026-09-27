@@ -18,8 +18,8 @@ body.dark {
   --bg: #111312;
   --surface: #191C1A;
   --muted: #92988E;
-  --accent: #B8F34A;
-  --accent2: #78A65A;
+  --accent: #D4A017;
+  --accent2: #B08A2E;
   --border: #30352F;
 }
 
@@ -58,7 +58,7 @@ body.dark .section-title { color: var(--accent2); }
 body.dark .section-subtitle { color: var(--muted); }
 
 body.dark .project-card { background: var(--surface); border-color: var(--border); }
-body.dark .project-card:hover { border-color: var(--accent2); box-shadow: 0 12px 28px rgba(184, 243, 74, 0.06); }
+body.dark .project-card:hover { border-color: var(--accent2); box-shadow: 0 12px 28px rgba(212, 160, 23, 0.12); }
 body.dark .project-card h3 { color: var(--accent2); }
 body.dark .project-card p { color: var(--muted); }
 body.dark .card-original-name { color: var(--muted); }
@@ -70,9 +70,9 @@ body.dark .filter-btn.active { background: var(--accent); color: var(--bg); bord
 body.dark .service-card { background: var(--surface); border-color: var(--border); }
 body.dark .service-card h4 { color: var(--text); }
 body.dark .service-card p { color: var(--muted); }
-body.dark .service-tag { background: rgba(184, 243, 74, 0.15); color: var(--accent); }
+body.dark .service-tag { background: rgba(212, 160, 23, 0.18); color: var(--accent); }
 body.dark .service-type { color: var(--muted); }
-body.dark .services-note { background: rgba(184, 243, 74, 0.06); border-color: rgba(184, 243, 74, 0.15); }
+body.dark .services-note { background: rgba(212, 160, 23, 0.12); border-color: rgba(212, 160, 23, 0.18); }
 
 body.dark .contact-card { background: var(--surface); border-color: var(--border); }
 body.dark .contact-card h4 { color: var(--text); }
@@ -82,14 +82,14 @@ body.dark .contact-action:hover { color: var(--accent2); }
 
 body.dark .about-text p { color: var(--text); }
 body.dark .stack-heading { color: var(--accent2); }
-body.dark .stack-item { background: rgba(184, 243, 74, 0.04); border-color: rgba(184, 243, 74, 0.1); }
+body.dark .stack-item { background: rgba(212, 160, 23, 0.08); border-color: rgba(212, 160, 23, 0.15); }
 body.dark .stack-item strong { color: var(--accent2); }
 body.dark .stack-item span { color: var(--muted); }
 
 body.dark .video-placeholder { background: var(--border); }
 
 /* ---------- Status badge dark mode ---------- */
-body.dark .status-deployed { background: rgba(184, 243, 74, 0.15); color: var(--accent); }
+body.dark .status-deployed { background: rgba(212, 160, 23, 0.18); color: var(--accent); }
 body.dark .status-demo { background: rgba(146, 152, 142, 0.15); color: var(--muted); }
 
 /* ---------- Modal dark mode ---------- */
@@ -101,7 +101,7 @@ body.dark .modal-box li { color: var(--text); }
 body.dark .modal-close { color: var(--muted); }
 body.dark .modal-close:hover { color: var(--accent2); }
 body.dark .modal-price { color: var(--accent2); }
-body.dark .modal-badge { background: rgba(184, 243, 74, 0.15); color: var(--accent); }
+body.dark .modal-badge { background: rgba(212, 160, 23, 0.18); color: var(--accent); }
 
 /* ---------- Theme Toggle ---------- */
 .theme-toggle {
@@ -282,7 +282,7 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
 
 body.dark .btn-primary { background-color: var(--accent); color: var(--bg); }
 body.dark .btn-secondary { color: var(--accent); border-color: var(--accent); }
-body.dark .btn-secondary:hover { background: rgba(184, 243, 74, 0.1); }
+body.dark .btn-secondary:hover { background: rgba(212, 160, 23, 0.15); }
 
 /* ---------- Hero Scroll Arrow ---------- */
 .hero-scroll {
@@ -542,10 +542,10 @@ body.dark .video-placeholder { background: var(--border); }
 .tag-automation { background: rgba(200, 58, 50, 0.1); color: var(--accent2); }
 .tag-data { background: rgba(200, 58, 50, 0.1); color: var(--accent2); }
 
-body.dark .tag-ai { background: rgba(184, 243, 74, 0.15); color: var(--accent2); }
-body.dark .tag-research { background: rgba(184, 243, 74, 0.15); color: var(--accent2); }
-body.dark .tag-automation { background: rgba(184, 243, 74, 0.15); color: var(--accent2); }
-body.dark .tag-data { background: rgba(184, 243, 74, 0.15); color: var(--accent2); }
+body.dark .tag-ai { background: rgba(212, 160, 23, 0.18); color: var(--accent2); }
+body.dark .tag-research { background: rgba(212, 160, 23, 0.18); color: var(--accent2); }
+body.dark .tag-automation { background: rgba(212, 160, 23, 0.18); color: var(--accent2); }
+body.dark .tag-data { background: rgba(212, 160, 23, 0.18); color: var(--accent2); }
 
 /* ---------- Status Badges ---------- */
 .status-badge {
@@ -775,7 +775,7 @@ body.dark .help-card p { color: var(--muted); }
 body.dark .resource-card { background: var(--surface); border-color: var(--border); }
 body.dark .resource-info h4 { color: var(--text); }
 body.dark .resource-info p { color: var(--muted); }
-body.dark .resource-badge { background: rgba(184, 243, 74, 0.15); color: var(--accent); }
+body.dark .resource-badge { background: rgba(212, 160, 23, 0.18); color: var(--accent); }
 
 /* ---------- Selection (dark mode) ---------- */
 ::selection { background: var(--accent); color: var(--bg); }
@@ -899,7 +899,7 @@ body.dark .ph { color: #FCD116; }
 
 body.dark .form-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(184, 243, 74, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.18);
 }
 
 .form-input::placeholder {
