@@ -1,6 +1,6 @@
 /**
- * Agentic PH · Portfolio JS v2d
- * Tab navigation, project/service/product filtering with modal popups, theme toggle
+ * Agentic PH · Portfolio JS v11
+ * Single-page scroll, modal popups, theme toggle, project filtering
  * No external dependencies.
  */
 
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
       githubUrl: 'https://github.com/agenticph/p1-client-intake',
+      techStack: ['Python 3.10+', 'Jinja-style templates', 'pytest'],
       sections: [
         {
           heading: 'Problem',
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
       githubUrl: 'https://github.com/agenticph/p2-ph-market-intelligence',
+      techStack: ['Python', 'pandas', 'Plotly', 'Streamlit'],
       sections: [
         {
           heading: 'Problem',
@@ -97,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
       githubUrl: 'https://github.com/agenticph/p3-rfp-analyzer',
+      techStack: ['Python', 'PyMuPDF', 'OpenAI API', 'Pydantic', 'Streamlit'],
       sections: [
         {
           heading: 'Problem',
@@ -136,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
       githubUrl: 'https://github.com/agenticph/p4-customer-feedback-intel',
+      techStack: ['Python', 'VADER', 'scikit-learn', 'pandas', 'Plotly', 'Streamlit'],
       sections: [
         {
           heading: 'Problem',
@@ -175,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
       githubUrl: 'https://github.com/agenticph/p5-competitive-intel',
+      techStack: ['Python 3.13+', 'stdlib only', 'CLI reporting'],
       sections: [
         {
           heading: 'Problem',
@@ -214,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
       githubUrl: 'https://github.com/agenticph/p6-research-decision',
+      techStack: ['Python', 'Jupyter', 'pandas', 'matplotlib', 'seaborn'],
       sections: [
         {
           heading: 'Problem',
@@ -253,6 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = [
     {
       title: 'Product Research &amp; Market Analysis',
+      techStack: ['Python', 'pandas', 'Plotly', 'Power BI', 'Streamlit'],
       sections: [
         {
           heading: 'Description',
@@ -270,6 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Data Extraction &amp; Processing',
+      techStack: ['Python', 'pandas', 'NumPy', 'n8n / Make', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -287,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Workflow Automation Setup',
+      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'n8n / Make', 'Agentic AI Systems'],
       sections: [
         {
           heading: 'Description',
@@ -304,6 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Orchestrator Retainer',
+      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'n8n / Make', 'Agentic AI Systems', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -328,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'AI Workflow Prompt Kit',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['LLMs (GPT-5, Claude, DeepSeek)', 'Prompt Engineering'],
       sections: [
         {
           heading: 'Description',
@@ -346,6 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'No-Code Automation Templates (5-Pack)',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['n8n / Make', 'Webhooks', 'API Integration'],
       sections: [
         {
           heading: 'Description',
@@ -364,6 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Presentation Deck Templates',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['Power BI', 'Data Visualization'],
       sections: [
         {
           heading: 'Description',
@@ -382,6 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Portfolio Case Study System',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['Markdown', 'GitHub', 'Template Design'],
       sections: [
         {
           heading: 'Description',
@@ -400,6 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Research Report System',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['Python', 'pandas', 'Power BI', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -422,6 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'AI Chatbot Blueprint',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'Agentic AI Systems'],
       sections: [
         {
           heading: 'Description',
@@ -440,6 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Workflow Audit Checklist',
       badge: 'Available on Gumroad / RaketPH',
+      techStack: ['Process Mapping', 'Excel', 'Python'],
       sections: [
         {
           heading: 'Description',
@@ -458,78 +475,100 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   /* ===========================================
+     Tech Stack shared HTML (used in modals)
+     =========================================== */
+  const techStackHTML = `
+    <div class="stack-section">
+      <h3 class="stack-heading" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;">Tech Stack</h3>
+      <div class="stack-list" style="gap:0.4rem;">
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>Python</strong>
+          <span>Core automation, data processing, and AI/ML pipelines</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>Streamlit</strong>
+          <span>Rapid dashboard and prototype deployment</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>LLMs (GPT-5, Claude, DeepSeek)</strong>
+          <span>Document intelligence, analysis, and natural language interfaces</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>NumPy / Pandas</strong>
+          <span>Data analysis, statistical modeling, and numerical computation</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>n8n / Make</strong>
+          <span>Workflow automation and multi-service orchestration</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>Power BI</strong>
+          <span>Data visualization, business intelligence dashboards, and stakeholder reporting</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>GitHub</strong>
+          <span>Version control, CI/CD, and collaboration</span>
+        </div>
+        <div class="stack-item" style="padding:0.5rem 0.75rem;">
+          <strong>Agentic AI Systems (Hermes, Paperclip, Claude Code)</strong>
+          <span>Multi-agent orchestration and autonomous workflows</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  /* ===========================================
      DOM References
      =========================================== */
   const els = {
     navLinks: document.getElementById('nav-links'),
     navToggle: document.getElementById('mobile-nav-toggle'),
     themeToggle: document.getElementById('theme-toggle'),
-    tabs: document.querySelectorAll('[data-tab]'),
-    tabContents: document.querySelectorAll('.tab-content'),
     filterTabs: document.querySelectorAll('.filter-tab'),
     projectCards: document.querySelectorAll('.project-card'),
     modalOverlay: document.getElementById('modal-overlay'),
     modalContent: document.getElementById('modal-content'),
     modalClose: document.getElementById('modal-close'),
+    scrollSections: document.querySelectorAll('.scroll-section'),
+    navAnchors: document.querySelectorAll('.nav-link'),
   };
 
   /* ===========================================
-     State
+     Active Nav Link via Intersection Observer
      =========================================== */
-  const state = {
-    activeTab: 'about',
-    activeFilter: 'all',
+  const sectionIds = ['hero', 'about', 'projects', 'services', 'resources', 'contact'];
+
+  const observerOptions = {
+    rootMargin: '-45% 0px -50% 0px',
+    threshold: 0,
   };
 
-  /* ===========================================
-     Tab Navigation
-     =========================================== */
-  function switchTab(tabId) {
-    els.navLinks.querySelectorAll('[data-tab]').forEach((link) => {
-      const isActive = link.dataset.tab === tabId;
-      link.classList.toggle('active', isActive);
-      if (link.getAttribute('role') === 'tab') {
-        link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        els.navAnchors.forEach((link) => {
+          const isActive = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('active', isActive);
+        });
       }
     });
+  }, observerOptions);
 
-    els.tabContents.forEach((el) => {
-      el.classList.toggle('active', el.id === tabId);
-    });
-
-    state.activeTab = tabId;
-    window.history.replaceState(null, '', `#${tabId}`);
-
-    els.navLinks.classList.remove('open');
-  }
-  window.switchTab = switchTab;
-
-  /* Handle clicks on data-tab elements in nav */
-  els.navLinks.addEventListener('click', (e) => {
-    const trigger = e.target.closest('[data-tab]');
-    if (!trigger) return;
-    const tabId = trigger.dataset.tab;
-    if (tabId) {
-      switchTab(tabId);
-    }
-  });
-
-  /* Handle clicks on data-tab elements outside nav (hero buttons, etc.) */
-  document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('[data-tab]');
-    if (!trigger) return;
-    if (els.navLinks.contains(trigger)) return; // handled above
-    const tabId = trigger.dataset.tab;
-    if (tabId) {
-      switchTab(tabId);
-    }
-  });
+  els.scrollSections.forEach((section) => observer.observe(section));
 
   /* ===========================================
      Mobile Nav Toggle
      =========================================== */
   els.navToggle.addEventListener('click', () => {
     els.navLinks.classList.toggle('open');
+  });
+
+  /* Close mobile nav on anchor click */
+  els.navAnchors.forEach((link) => {
+    link.addEventListener('click', () => {
+      els.navLinks.classList.remove('open');
+    });
   });
 
   /* ===========================================
@@ -545,7 +584,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
-      state.activeFilter = filter;
 
       els.projectCards.forEach((card) => {
         const categories = card.dataset.categories || '';
@@ -574,6 +612,9 @@ document.addEventListener('DOMContentLoaded', () => {
     data.sections.forEach((section) => {
       html += `<div class="modal-section"><h4>${section.heading}</h4>${section.body}</div>`;
     });
+
+    // Tech Stack section
+    html += `<div class="modal-section"><h4>Tech Stack</h4>${techStackHTML}</div>`;
 
     // Show GitHub button for sample projects
     if (type === 'sample' && data.githubUrl) {
@@ -630,7 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
      =========================================== */
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      const target = e.target.closest('[data-card-type], [data-tab], .nav-link');
+      const target = e.target.closest('[data-card-type], .nav-link');
       if (target && !e.target.closest('button, textarea, input')) {
         e.preventDefault();
         target.click();
@@ -659,26 +700,5 @@ document.addEventListener('DOMContentLoaded', () => {
   els.themeToggle.addEventListener('click', () => {
     const isDark = document.body.classList.contains('dark');
     applyTheme(isDark ? 'light' : 'dark');
-  });
-
-  /* ===========================================
-     Init: Read URL hash for initial tab
-     =========================================== */
-  const validTabs = ['about', 'samples', 'services', 'products', 'contact'];
-  const hash = window.location.hash.replace('#', '');
-  if (validTabs.includes(hash)) {
-    switchTab(hash);
-  } else {
-    switchTab('about');
-  }
-
-  /* ===========================================
-     Handle direct URL hash changes (browser back/forward)
-     =========================================== */
-  window.addEventListener('hashchange', () => {
-    const h = window.location.hash.replace('#', '');
-    if (validTabs.includes(h)) {
-      switchTab(h);
-    }
   });
 });

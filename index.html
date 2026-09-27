@@ -12,7 +12,7 @@
 
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar" role="navigation">
-    <button class="nav-brand" data-tab="about" aria-label="Home">
+    <a href="#hero" class="nav-brand" aria-label="Home">
       <svg class="brand-icon" width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <polygon points="37.6,40.1 39.0,7.7 51.4,37.6" fill="#0038A8"/>
         <polygon points="63.0,54.1 81.6,73.0 55.9,66.3" fill="#0038A8"/>
@@ -20,19 +20,19 @@
         <circle cx="47" cy="53" r="7.5" fill="#FCD116"/>
       </svg>
       <span><span class="agentic">Agentic</span><span class="ph">PH</span></span>
-    </button>
+    </a>
     <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
     </button>
-    <ul class="nav-links" id="nav-links" role="tablist">
-      <li role="none"><button role="tab" data-tab="about" class="nav-link" aria-selected="false">About</button></li>
-      <li role="none"><button role="tab" data-tab="samples" class="nav-link" aria-selected="false">Projects</button></li>
-      <li role="none"><button role="tab" data-tab="services" class="nav-link" aria-selected="false">Services</button></li>
-      <li role="none"><button role="tab" data-tab="products" class="nav-link" aria-selected="false">Resources</button></li>
-      <li role="none"><button role="tab" data-tab="contact" class="nav-link" aria-selected="false">Contact</button></li>
-      <li role="none">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#resources" class="nav-link">Resources</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
           <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -41,10 +41,9 @@
     </ul>
   </nav>
 
-  <!-- ==================== ABOUT TAB (integrated Hero + About) ==================== -->
-  <section class="tab-content active" id="about" role="tabpanel">
-    <!-- Hero Section -->
-    <div class="hero" id="about-hero">
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="scroll-section" id="hero">
+    <div class="hero">
       <div class="hero-watermark" aria-hidden="true">
         <svg viewBox="0 0 100 100" width="400" height="400" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.12;pointer-events:none">
           <polygon points="37.6,40.1 39.0,7.7 51.4,37.6" fill="#0038A8"/>
@@ -57,20 +56,22 @@
         <h1 class="hero-brand">AgenticPH</h1>
         <p class="hero-tagline">Complexity Made Useful.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="switchTab('samples')">View my work</button>
-          <button class="btn btn-secondary" onclick="switchTab('contact')">Contact Me</button>
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
       </div>
       <div class="hero-scroll">
-        <a href="#about-body" class="scroll-link" aria-label="Scroll to About content">
+        <a href="#about" class="scroll-link" aria-label="Scroll to About">
           <span class="scroll-label">About</span>
           <span class="chevron-arrow"></span>
         </a>
       </div>
     </div>
+  </section>
 
-    <!-- About body -->
-    <div class="section-page" id="about-body">
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section class="scroll-section" id="about">
+    <div class="section-page">
       <div class="about-text">
         <p><strong>Who I am:</strong> I'm an Economics (formerly Computer Science) student at DLSU-Taft. I love games, I love technology, and I really love AI. I think that business is about putting your idea out there and seeing whether people find value in it, so here are my ideas, and here I am putting them out there.</p>
 
@@ -123,8 +124,8 @@
     </div>
   </section>
 
-  <!-- ==================== SAMPLES TAB ==================== -->
-  <section class="tab-content" id="samples" role="tabpanel">
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section class="scroll-section" id="projects">
     <div class="section-page">
       <div class="page-header">
         <h2 class="section-title">Projects</h2>
@@ -288,8 +289,8 @@
     </div>
   </section>
 
-  <!-- ==================== SERVICES TAB ==================== -->
-  <section class="tab-content" id="services" role="tabpanel">
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section class="scroll-section" id="services">
     <div class="section-page">
       <div class="page-header">
         <h2 class="section-title">Services</h2>
@@ -353,12 +354,12 @@
           <p>If you have a process that's messy, manual, or difficult to manage, I can help map it out, identify opportunities for improvement, and prototype a better approach.</p>
         </div>
       </div>
-      <p class="help-closing">Not sure whether your problem fits? <a href="#" onclick="switchTab('contact'); return false;" class="help-closing-link">Tell me</a> what you're trying to accomplish. I'll give you an honest assessment of whether I can help.</p>
+      <p class="help-closing">Not sure whether your problem fits? <a href="#contact" class="help-closing-link">Tell me</a> what you're trying to accomplish. I'll give you an honest assessment of whether I can help.</p>
     </div>
   </section>
 
-  <!-- ==================== PRODUCTS TAB ==================== -->
-  <section class="tab-content" id="products" role="tabpanel">
+  <!-- ==================== RESOURCES SECTION ==================== -->
+  <section class="scroll-section" id="resources">
     <div class="section-page">
       <div class="page-header">
         <h2 class="section-title">Resources</h2>
@@ -485,8 +486,8 @@
     </div>
   </section>
 
-  <!-- ==================== CONTACT TAB ==================== -->
-  <section class="tab-content" id="contact" role="tabpanel">
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="scroll-section" id="contact">
     <div class="section-page">
       <div class="page-header">
         <h2 class="section-title">Contact</h2>
@@ -494,6 +495,16 @@
           <svg width="60" height="4" viewBox="0 0 60 4" fill="none"><rect width="60" height="4" rx="2" fill="#D4A017"/></svg>
         </div>
         <p class="section-subtitle">Let's build something.</p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <form class="contact-form" action="mailto:caronan.nat@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required class="form-input">
+          <input type="email" name="email" placeholder="Your Email" required class="form-input">
+          <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+        </form>
       </div>
 
       <div class="contact-grid single-row">
