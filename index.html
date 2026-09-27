@@ -501,7 +501,6 @@
       <div class="contact-form-wrap">
         <form class="contact-form" onsubmit="return handleContactForm(event)" novalidate>
           <input type="text" name="name" placeholder="Your Name" required class="form-input">
-          <input type="email" name="email" placeholder="Your Email" required class="form-input">
           <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
           <button type="submit" class="btn btn-primary form-submit">Send Message</button>
         </form>
@@ -583,14 +582,11 @@
       event.preventDefault();
       const form = event.target;
       const name = encodeURIComponent(form.name.value.trim());
-      const email = encodeURIComponent(form.email.value.trim());
       const message = encodeURIComponent(form.message.value.trim());
-      if (!name || !email || !message) return false;
+      if (!name || !message) return false;
       const url = 'https://mail.google.com/mail/?view=cm&fs=1&to=caronan.nat@gmail.com' +
-        '&su=' + encodeURIComponent('Contact from ') + name +
-        '&body=' + encodeURIComponent('Name: ') + name +
-        '%0A' + encodeURIComponent('Email: ') + email +
-        '%0A%0A' + message;
+        '&su=Contact from ' + name +
+        '&body=' + message;
       window.open(url, '_blank');
       return false;
     }
