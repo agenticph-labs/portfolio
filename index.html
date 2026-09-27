@@ -499,7 +499,7 @@
 
       <!-- Contact Form -->
       <div class="contact-form-wrap">
-        <form class="contact-form" action="mailto:caronan.nat@gmail.com" method="get" enctype="text/plain">
+        <form class="contact-form" onsubmit="return handleContactForm(event)" novalidate>
           <input type="text" name="name" placeholder="Your Name" required class="form-input">
           <input type="email" name="email" placeholder="Your Email" required class="form-input">
           <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
@@ -514,7 +514,7 @@
           </div>
           <h4>Email</h4>
           <p>Get in touch directly for project inquiries and consulting engagements.</p>
-          <button class="contact-action" onclick="window.location.href='mailto:caronan.nat@gmail.com'">
+          <button class="contact-action" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=caronan.nat@gmail.com','_blank')">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             caronan.nat@gmail.com
           </button>
@@ -528,7 +528,7 @@
           </div>
           <h4>LinkedIn</h4>
           <p>Connect, follow project updates, and view professional background.</p>
-          <button class="contact-action" onclick="window.open('https://www.linkedin.com/in/nathaniel-caronan-8b68a5329/','_blank')">
+          <button class="contact-action" onclick="window.open('https://www.linkedin.com/in/nlcaronan','_blank')">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             Nathaniel C. on LinkedIn
           </button>
@@ -578,6 +578,23 @@
     </div>
   </footer>
 
+  <script>
+    function handleContactForm(event) {
+      event.preventDefault();
+      const form = event.target;
+      const name = encodeURIComponent(form.name.value.trim());
+      const email = encodeURIComponent(form.email.value.trim());
+      const message = encodeURIComponent(form.message.value.trim());
+      if (!name || !email || !message) return false;
+      const url = 'https://mail.google.com/mail/?view=cm&fs=1&to=caronan.nat@gmail.com' +
+        '&su=' + encodeURIComponent('Contact from ') + name +
+        '&body=' + encodeURIComponent('Name: ') + name +
+        '%0A' + encodeURIComponent('Email: ') + email +
+        '%0A%0A' + message;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
