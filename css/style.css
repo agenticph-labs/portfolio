@@ -144,6 +144,7 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
   cursor: pointer;
   transition: color 400ms;
   font-family: inherit;
+  text-decoration: none;
 }
 
 .brand-icon { flex-shrink: 0; }
@@ -265,6 +266,7 @@ body.dark .theme-toggle .moon-icon { opacity: 1; transform: scale(1); }
   cursor: pointer;
   border: none;
   font-family: inherit;
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -729,6 +731,7 @@ body.dark .help-card p { color: var(--muted); }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 500ms, box-shadow 500ms;
   cursor: pointer;
 }
@@ -743,6 +746,7 @@ body.dark .help-card p { color: var(--muted); }
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .resource-info h4 {
