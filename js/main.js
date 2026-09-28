@@ -477,45 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===========================================
      Tech Stack shared HTML (used in modals)
      =========================================== */
-  const techStackHTML = `
-    <div class="stack-section">
-      <h3 class="stack-heading" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;">Tech Stack</h3>
-      <div class="stack-list" style="gap:0.4rem;">
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>Python</strong>
-          <span>Core automation, data processing, and AI/ML pipelines</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>Streamlit</strong>
-          <span>Rapid dashboard and prototype deployment</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>LLMs (GPT-5, Claude, DeepSeek)</strong>
-          <span>Document intelligence, analysis, and natural language interfaces</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>NumPy / Pandas</strong>
-          <span>Data analysis, statistical modeling, and numerical computation</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>n8n / Make</strong>
-          <span>Workflow automation and multi-service orchestration</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>Power BI</strong>
-          <span>Data visualization, business intelligence dashboards, and stakeholder reporting</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>GitHub</strong>
-          <span>Version control, CI/CD, and collaboration</span>
-        </div>
-        <div class="stack-item" style="padding:0.5rem 0.75rem;">
-          <strong>Agentic AI Systems (Hermes, Paperclip, Claude Code)</strong>
-          <span>Multi-agent orchestration and autonomous workflows</span>
-        </div>
-      </div>
-    </div>
-  `;
+  const techStackListHTML = `<div class="stack-list" style="gap:0.4rem;"></div>`;
 
   /* ===========================================
      DOM References
@@ -614,7 +576,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Tech Stack section
-    html += `<div class="modal-section"><h4>Tech Stack</h4>${techStackHTML}</div>`;
+    let stackItems = '';
+    if (data.techStack && data.techStack.length > 0) {
+      stackItems = data.techStack.map(item => `<div class="stack-item"><span>${item}</span></div>`).join('');
+      html += `<div class="modal-section"><h4>Tech Stack</h4><div class="stack-list">${stackItems}</div></div>`;
+    }
 
     // Show GitHub button for sample projects
     if (type === 'sample' && data.githubUrl) {
