@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===========================================
      Active Nav Link via Intersection Observer
      =========================================== */
-  const sectionIds = ['hero', 'about', 'projects', 'services', 'resources', 'contact'];
+  const sectionIds = ['hero', 'about', 'labs', 'work', 'software', 'contact'];
 
   const observerOptions = {
     rootMargin: '-45% 0px -50% 0px',

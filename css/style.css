@@ -29,7 +29,7 @@ body.dark {
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: 'Space Mono', monospace;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
