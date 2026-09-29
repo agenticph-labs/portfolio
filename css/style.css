@@ -29,7 +29,7 @@ body.dark {
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -37,6 +37,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* ---------- Heading Fonts (Space Mono) ---------- */
+h1, h2, h3, h4, .hero-brand, .section-title, .nav-brand {
+  font-family: 'Space Mono', monospace;
 }
 
 /* ---------- Dark Mode ---------- */
