@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'automation-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
-      githubUrl: 'https://github.com/agenticph/p1-client-intake',
-      techStack: ['Python 3.10+', 'Jinja-style templates', 'pytest'],
+      githubUrl: 'https://github.com/agenticph-labs/LP1',
+      techStack: ['Python 3.10+', 'Python string templates', 'pytest'],
       sections: [
         {
           heading: 'Problem',
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'data-accent',
       statusClass: 'status-deployed',
       statusLabel: 'Deployed',
-      githubUrl: 'https://github.com/agenticph/p2-ph-market-intelligence',
-      techStack: ['Python', 'pandas', 'Plotly', 'Streamlit'],
+      githubUrl: 'https://github.com/agenticph-labs/LP2',
+      techStack: ['Python', 'pandas', 'numpy', 'Plotly', 'Streamlit'],
       sections: [
         {
           heading: 'Problem',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'ai-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph/p3-rfp-analyzer',
+      githubUrl: 'https://github.com/agenticph-labs/LP3',
       techStack: ['Python', 'PyMuPDF', 'OpenAI API', 'Pydantic', 'Streamlit'],
       sections: [
         {
@@ -132,14 +132,14 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      displayName: 'Sentiment Compass',
+      displayName: 'Customer Feedback Intelligence',
       originalName: 'Customer Feedback Intel',
-      title: 'Sentiment Compass &lt; Customer Feedback Intel',
+      title: 'Customer Feedback Intelligence &lt; Customer Feedback Intel',
       accentClass: 'ai-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph/p4-customer-feedback-intel',
-      techStack: ['Python', 'VADER', 'scikit-learn', 'pandas', 'Plotly', 'Streamlit'],
+      githubUrl: 'https://github.com/agenticph-labs/LP4',
+      techStack: ['Python', 'nltk (VADER)', 'scikit-learn', 'pandas', 'numpy', 'plotly', 'streamlit', 'wordcloud'],
       sections: [
         {
           heading: 'Problem',
@@ -173,12 +173,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       displayName: 'Competitive Radar',
-      originalName: 'Competitive Intel',
-      title: 'Competitive Radar &lt; Competitive Intel',
+      originalName: 'Competitive Intelligence Platform',
+      title: 'Competitive Radar &lt; Competitive Intelligence Platform',
       accentClass: 'automation-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph/p5-competitive-intel',
+      githubUrl: 'https://github.com/agenticph-labs/LP5',
       techStack: ['Python 3.13+', 'stdlib only', 'CLI reporting'],
       sections: [
         {
@@ -218,8 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
       accentClass: 'research-accent',
       statusClass: 'status-demo',
       statusLabel: 'Demo-ready',
-      githubUrl: 'https://github.com/agenticph/p6-research-decision',
-      techStack: ['Python', 'Jupyter', 'pandas', 'matplotlib', 'seaborn'],
+      githubUrl: 'https://github.com/agenticph-labs/LP6',
+      techStack: ['Python', 'Jupyter', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'plotly', 'Streamlit'],
       sections: [
         {
           heading: 'Problem',
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = [
     {
       title: 'Product Research &amp; Market Analysis',
-      techStack: ['Python', 'pandas', 'Plotly', 'Power BI', 'Streamlit'],
+      techStack: ['Python', 'pandas', 'Plotly', 'Streamlit'],
       sections: [
         {
           heading: 'Description',
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Data Extraction &amp; Processing',
-      techStack: ['Python', 'pandas', 'NumPy', 'n8n / Make', 'GitHub'],
+      techStack: ['Python', 'pandas', 'NumPy', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Workflow Automation Setup',
-      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'n8n / Make', 'Agentic AI Systems'],
+      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)'],
       sections: [
         {
           heading: 'Description',
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'AI Orchestrator Retainer',
-      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'n8n / Make', 'Agentic AI Systems', 'GitHub'],
+      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'AI Workflow Prompt Kit',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['LLMs (GPT-5, Claude, DeepSeek)', 'Prompt Engineering'],
+      techStack: ['LLMs (GPT-5, Claude, DeepSeek)'],
       sections: [
         {
           heading: 'Description',
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'No-Code Automation Templates (5-Pack)',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['n8n / Make', 'Webhooks', 'API Integration'],
+      techStack: [],
       sections: [
         {
           heading: 'Description',
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Presentation Deck Templates',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['Power BI', 'Data Visualization'],
+      techStack: [],
       sections: [
         {
           heading: 'Description',
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Portfolio Case Study System',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['Markdown', 'GitHub', 'Template Design'],
+      techStack: ['Markdown', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Research Report System',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['Python', 'pandas', 'Power BI', 'GitHub'],
+      techStack: ['Python', 'pandas', 'GitHub'],
       sections: [
         {
           heading: 'Description',
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'AI Chatbot Blueprint',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)', 'Agentic AI Systems'],
+      techStack: ['Python', 'LLMs (GPT-5, Claude, DeepSeek)'],
       sections: [
         {
           heading: 'Description',
@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Workflow Audit Checklist',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: ['Process Mapping', 'Excel', 'Python'],
+      techStack: ['Python'],
       sections: [
         {
           heading: 'Description',
