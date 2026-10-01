@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'No-Code Automation Templates (5-Pack)',
       badge: 'Available on Gumroad / RaketPH',
-      techStack: [],
+      techStack: ['n8n', 'n8n Workflow Templates'],
       sections: [
         {
           heading: 'Description',
