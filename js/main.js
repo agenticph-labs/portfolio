@@ -299,11 +299,11 @@ document.addEventListener('DOMContentLoaded', () => {
       sections: [
         {
           heading: 'Description',
-          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting using LLMs and n8n/Make. From intake to structured output · no manual steps.</p>'
+          body: '<p>End-to-end automated pipelines for document processing, data extraction, and reporting using LLMs and Python. From intake to structured output · no manual steps.</p>'
         },
         {
           heading: "What's Included",
-          body: '<ul><li>Custom pipeline design and development</li><li>LLM integration (GPT-4, Claude, or DeepSeek)</li><li>n8n/Make workflow configuration</li><li>Automated reporting and export</li><li>30-day support and maintenance</li></ul>'
+          body: '<ul><li>Custom pipeline design and development</li><li>LLM integration (GPT-4, Claude, or DeepSeek)</li><li>Python workflow configuration</li><li>Automated reporting and export</li><li>30-day support and maintenance</li></ul>'
         },
         {
           heading: 'Timeline',
